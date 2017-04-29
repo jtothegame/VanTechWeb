@@ -248,11 +248,6 @@ organization_list = [
       110,25,"http://www.radiant.net","https://twitter.com/@Radiant_Comm",true
     ],
     ["ZenHub","505 - 55 Water Street  Vancouver, BC V6B 1A1","To build amazing
-<<<<<<< HEAD
-    software, be where the software lives.",45,14,"http://www.zenhub.com",
-    "https://twitter.com/zenhubhq", true ]
-  ]
-=======
     software, be where the software lives.",45,14,"www.zenhub.com",
     "https://twitter.com/zenhubhq", true ],
     ["Payfirma", "1185 W Georgia St #740, Vancouver, BC V6E 4E6", "We help
@@ -477,7 +472,6 @@ organization_list = [
           50,10,"http://www.pandoo.cc/","https://twitter.com/PandooTEKInc",true
        ]
 ]
->>>>>>> f9a8dcb4bd504b7e4a2087f1d0155721c4f51ac7
 
 
   organization_list.each do |name, address, overview, employees, teamsize,
