@@ -381,8 +381,96 @@ organization_list = [
       Rating at the 2015 Service Excellence Awards by Circuits Assembly.
       Creation has locations in USA, Canada, Mexico & China, and is
       headquartered in Burnaby,Canada.",1141,25,"http://www.creationtech.com/",
-      "https://twitter.com/@creationtech",true
-  ]
+      "https://twitter.com/@creationtech",true],
+      ["3D3 Solutions","1673 Cliveden Avenue, Delta, V3M 6V5","3D3 Solutions
+          develops HDI 3D scanners and FlexScan3D, a leading PC application offering
+           sophisticated 3D acquisition, visualization and mesh processing.",130,
+           22,"http://lmi3d.com/","https://twitter.com/3d3solutions",true
+        ],
+        ["Absolute Software","1600-1055 Dunsmuir Street, Vancouver, V7X 1K8","Absolute
+          provides persistent endpoint security and data risk management solutions
+          for computers, tablets, and smartphones.",599,32,
+          "https://www.absolute.com/en","https://twitter.com/@absolutecorp",true
+        ],
+        ["Grow","570 Granville St #1600, Vancouver, BC V6C 3P1","Grow is a leading
+          Enterprise Fintech company, serving consumers through partnerships
+          with top global financial institutions. By leveraging technology and
+          data to reinvent the banking experience, Grow makes personal finances
+          understandable and anxiety-free.",50,11,"https://.poweredbygrow.com",
+          "https://twitter.com/poweredbygrow",true
+        ],
+        ["Vision Critical","200 Granville Street, Vancouver, V6C 1S4","Vision Critical
+           provides a cloud-based customer intelligence platform that allows companies
+            to build engaged, secure communities of customers they can use
+            continuously, across the enterprise, for ongoing, real-time feedback
+            and insight. Designed for today’s always-on, social and mobile savvy
+            customer, Vision Critical’s technology helps large, customer-centric
+            enterprises discover what their customers want so they can deliver what
+            they need. Unlike traditional customer research, which is slow, expensive
+             and gathers dust on a shelf, Vision Critical’s customer intelligence
+             platform replaces static data and cumbersome reports with real-time
+             actionable customer intelligence that companies need to build better
+             products, deliver better services and achieve better business outcomes.",
+             727,35,"https://www.visioncritical.com/", "https://twitter.com/@visioncritical",true
+        ],
+        ["Methanex","1800 Waterfront Centre 200 Burrard Street, Vancouver, V6C 3M1",
+          "Methanex Corporation is the world’s largest producer and supplier of
+          methanol to major international markets in North America, Asia Pacific,
+          Europe and Latin America. Methanex is a Vancouver, Canada-based, publicly
+          traded company with shares listed for trading on the Toronto Stock
+          Exchange in Canada under the trading symbol on the NASDAQ Global Market
+          in the United States under the trading symbol",1009,42,
+          "http://www.methanex.com","https://twitter.com/@Methanex",true
+        ],
+        ["Allocadia","1066 W Hastings St, Suite 1410, Vancouver, BC V6E 3X1",
+          "Allocadia Marketing Performance Management cloud software transforms
+          how marketers plan, budget, analyze, and optimize marketing return
+          on investment.",50,11,"https://www.allocadia.com",
+          "https://twitter.com/allocadia",true
+        ],
+        ["MDA","13800 Commerce Parkway, Richmond, V6V 2J3","provide information
+          solutions for decision making and operational performance to businesses
+          and governments worldwide.",539,24,"http://www.mda.ca/",
+          "https://twitter.com/@MDA_Career",true
+        ],
+        ["Routific","555 W Hastings St #1780, Vancouver, BC V6B 4N6","We have built
+           a route optimization platform and industry-leading API that empowers
+           last-mile delivery businesses to work smarter and more efficiently,
+           saving up to 40% in driving time and fuel consumption.",50,11,
+           "http://www.routific.com","http://twitter.com/routific",true
+        ],
+        ["Bitlit","207 W Hastings St, Vancouver, BC V6B 2N4","Bitlit is a
+          free app where readers take a picture of their bookshelf and the app
+          uses computer vision to automatically identify all the books.",10,2,
+          "http://www.bitlit.com","https://twitter.com/bitlitmedia",true
+        ],
+        ["Quietly","33 Water St #808, Vancouver, BC V6B 1R4","Every brand has
+         distribution channels (social, blogs, newsletters). And every brand needs
+         content to fill these channels. Quietly helps brands and publishers develop
+         data-driven content that focuses on timeless topics to be promoted
+         (and re-promoted) to increase reach, traffic, and revenue. Using our
+         proprietary tools & analytics, keyword trends, and competitive landscape
+         research Quietly helps shape evergreen content marketing opportunities
+         through a thoughtful and strategic approach.",50,11,"http://www.quiet.ly",
+         "https://twitter.com/QuietlyContent",true
+       ],
+       ["Kabuni","1378 West Pender Street, Vancouver, BC, Vancouver, BC V6E 4S9",
+         "Kabuni Technologies Inc. is a SaaS and e-commerce company in the home
+         design space enabling independent home design professionals to grow their
+         business through an omni-channel retail experience under the brand name Kabuni.",
+         10,2,"https://www.kabuni.com","https://twitter.com/GetKabuni",true
+       ],
+       ["App Bridge","163 W Hastings St #507, Vancouver, BC V6B 1H5","AppBridge
+         is a Vancouver Canada based software company that provides a fast and
+         flexible enterprise content migration platform for Google Apps.",50,10,
+         "https://www.appbridge.io","https://twitter.com/appbridgeit",true
+       ],
+       ["Pandoo","688 W Hastings St, Vancouver, BC V6B 1P1","PANDOO is an alternative,
+          Web-based O/S. It transforms your web browser into a powerful cloud
+          computer. Among many features, PANDOO provides personalization services,
+          unprecedented speed, unlimited cloud storage and it's a 100% FREE!",
+          50,10,"http://www.pandoo.cc/","https://twitter.com/PandooTEKInc",true
+       ]
 ]
 
 
