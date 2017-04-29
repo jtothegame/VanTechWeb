@@ -29,16 +29,16 @@ puts "Users created!"
 
 User.create(name: "Nic",
             icon: "kirkk.jpg",
-            email: "ensay151@gmail.com",
-            password: "qwe",
-            password_confirmation: "qwe")
+            email: "nic@gmail.com",
+            password: "qweqwe",
+            password_confirmation: "qweqwe")
 puts "Nic created!"
 
 User.create(name: "Admin",
             icon: "kirkk.jpg",
             email: 'admin@gmail.com',
-            password: 'qwe',
-            password_confirmation: 'qwe',
+            password: 'qweqwe',
+            password_confirmation: 'qweqwe',
             admin: true)
 puts "Admin created!"
 
@@ -470,8 +470,116 @@ organization_list = [
           computer. Among many features, PANDOO provides personalization services,
           unprecedented speed, unlimited cloud storage and it's a 100% FREE!",
           50,10,"http://www.pandoo.cc/","https://twitter.com/PandooTEKInc",true
-       ]
-]
+       ],
+       ["LoginRadius","1281 W Georgia St, Vancouver, BC V6E 3J7","LoginRadius is
+         a leading Customer Identity and Access Management (cIAM) platform serving
+         over 150,000 web and mobile applications worldwide and managing
+         identities of over 650 million users.", 42,22,"www.loginradius.com",
+         "https://twitter.com/loginradius", true],
+      ["The Coup Company","318 Homer St, Vancouver, BC V6B 1E8", "The Coup
+        Company (“The Coup”) is a disruptive tech-enabled discovery and packaging
+        platform that surfaces new talent and original audience-driven IP.
+        Partnering with big players, including: exhibitors (Cineplex Entertainment)
+        TV networks (CBC) and brands (Canon), the Coup identifies and delivers
+        low-budget high, performing franchises with build in audiences.", 33,
+        11,"www.cinecoup.com","https://twitter.com/cinecoup", true],
+      ["Video Meme Creation & Sharing App", " 505 - 55 Water Street
+       Vancouver, BC V6B 1A1","Vemes are what happen when short-form video
+       and text come together in funny, inspiring ways.", 8, 2,"www.veme.com",
+       "https://twitter.com/veme", true],
+        ["7geese","55 Water St, Vancouver, BC V6B 1A1","7Geese eliminates the
+          performance review with a new, social approach to performance
+          management. Track Objectives and key results (OKRs), recognize
+          colleagues, conduct reflections, track 1-on-1s, and gather valuable
+          feedback all in a continuous, real-time environment.", 9,4, "www.7geese.com",
+              "https://twitter.com/7geese", true],
+              ["Edvisor","289 Abbott St #300, Vancouver, BC V6B 2K7", "We tend an
+                ear to calls, notes, emails, and other data sources to connect
+                information in the moment and help teams be more productive,
+                close more deals, and find new ways to delight customers", 34, 8,
+          "www.edvisor.io", "https://twitter.com/edvisorio", true],
+            ["Moijio", "1080 Howe St, Vancouver, BC V6Z", "When people ask us,
+              “What does Mojio mean?” we usually start by explaining that it
+              didn’t mean much of anything when the founders chose the name in
+              2012. That was the whole point. An automotive revolution was brewing
+               and we needed to put a name to the connected car, one that was as
+               open as the road itself. One that was as much about the journey as
+               it was the destination, one that represented the future of connectivity
+               and growth. Mojio was born.", 37, 13, "www.moj.io",
+               "https://twitter.com/getmojio", true],
+               ["Fodio Technologies", "128 W Hastings St, Vancouver, BC V6B 1G8",
+                 "We offer a comprehensive suite of financial services including
+                  general accounting, forecasting, budgeting, analytical and
+                  project support, controllership and financial reporting.
+                  We work with your team to meet your every financial need and
+                  advise you on the best practices to run your business more
+                  efficiently.", 7,3, "www.food.ee", "www.twitter.com/foodee",
+                  true],
+
+
+["Mobify","725 Granville St #420, Vancouver, BC V7Y 1C6","Mobify allows
+    e-Commerce retailers to launch seamless mobile shopping experiences across
+    mobile web, native app and wearable devices using a powerful developer
+    platform.",200,27,"http://www.mobify.com","https://twitter.com/mobify",true
+  ],
+  ["Fitplan","1062 Homer St #201, Vancouver, BC V6B","Fitplan is the dynamic
+     mobile app empowering our community to become their best selves. We are
+      fuelled by passion for helping others to realize their goals and making
+      wild fitness ambitions accessible.",50,11,"http://www.fitplanapp.com",
+      "https://twitter.com/fitplan_app",true
+  ],
+  ["Thinkific","520 Alexander St, Vancouver, BC V6A 1C7","Thinkific is the
+    easiest way to create and sell courses online.Using our simple platform,
+    experts or organizations can easily launch their own online courses or
+    complete online schools.",50,10,"http://www.thinkific.com",
+    "http://www.twitter.com/thinkific",true
+  ],
+  ["Semios","101-887 Great Northern Way, Vancouver, BC V5T 4T5","Semios
+    delivers precision crop management to growers of fruits and nuts. Using
+    machine-to-machine (M2M) solutions, we provide data and analytics that
+    increase crop value.",10,1,"http://www.semios.com",
+    "https://twitter.com/semios",true
+  ],
+  ["Rent Moola","1030 W Georgia St #710, Vancouver, BC V6E 2Y3","RentMoola,
+    one of North America's leading fintech companies is changing the landscape
+    of paying rent all over the world. Solving the age-old problem that paying
+    and collecting rent is a major hassle, RentMoola is an online global
+    payment network that allows tenants and owners to pay rent and other
+    payments by credit card, debit card, RM eCheck™ or RM Cash™ while
+    earning rewards.",50,10,"http://www.rentmoola.com",
+    "https://twitter.com/rentmoola",true
+  ],
+  ["PlaceSpeak","1005 Cypress Street, Vancouver, BC V6J 3K6","PlaceSpeak is
+  a cloud-based geosocial platform which is monetized through e-commerce. Its
+  innovative geo-authentication platform for digital identity aggregates vetted
+   users (“participants”), for the first time on the basis of where they live,
+   work and play, offering communication with individuals online according to
+   their actual address. PlaceSpeak authenticates participant users to place so
+   that they can weigh in on local issues and affect outcomes by connecting
+   with the policy-makers and decision-makers who impact the places they live
+   and work.",10,2,"https://www.placespeak.com/","https://twitter.com/placespeak",
+   true
+ ],
+ ["Ayogo","577 Great Northern Way #230, Vancouver, BC V5T 1E1","Ayogo distributes
+   highly-polished gamified health applications through organizations (such as
+   non-profits and patient advocacy groups) that serve patients with serious or
+   chronic diseases (diabetes, heart disease, childhood obesity).",10,1,
+   "http://www.ayogo.com","https://twitter.com/ayogohealth",true
+ ],
+ ["Skio Music","390 Cambie St, Vancouver, BC V6B 2N3","SKIO Music is a digital
+    licensing and collaboration platform for the music industry. Our curated
+    community of artists and labels have access to direct licensing deals with
+    secure instant payments, remix contests and opportunities to be officially
+    released on labels, as well as connection directly to the Pros.",50,11,
+   "http://www.skiomusic.com","http://twitter/skiomusic",true
+ ],
+ ["Wealthbar","1122 Mainland St #490, Vancouver, BC V6B 5L1","WealthBar is
+    Canada’s only full-service online financial advisor. We use technology
+    to make financial planning and investing more efficient and convenient,
+    but also have a team of dedicated financial advisors who work with every
+    client to help them plan and achieve their financial goals.",50,10,
+    "http://www.wealthbar.com","http://twitter.com/wealthbar",true]
+ ]
 
 
   organization_list.each do |name, address, overview, employees, teamsize,
