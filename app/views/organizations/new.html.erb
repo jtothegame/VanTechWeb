@@ -21,6 +21,13 @@
   <%= f.label :twitter %><br>
   <%= f.text_field :twitter%>
 
+  <%= f.label :Technology %><br>
+  <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name,
+                                  {},
+                                  { multiple: true, class:'browser-default chosen-select'}%>
+
+
+  <br><br>
   <%= f.check_box :published, { class: "filled-in" }, 'true', 'false' %>
   <%= f.label :published %>
   <br>
