@@ -13,8 +13,15 @@
     <%= render 'layouts/navbar' %>
     <%= render 'layouts/sidenav' %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+<!-- add dialogues instead -->
+<div class="right">
+
+<% flash.each do |message_type, message| %>
+    <%= javascript_tag "Materialize.toast('#{message}', 4000)" %>
+<% end %>
+</div>
+
+
 
     <%= yield %>
 
