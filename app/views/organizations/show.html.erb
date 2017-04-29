@@ -1,0 +1,14 @@
+<div class="">
+  <p>Title: <%= @organization.name %></p>
+  <p>Address: <%= @organization.address %></p>
+  <p>Overview: <%= @organization.overview %></p>
+  <p>Employees size: <%= @organization.employees %></p>
+  <p>Tech team size: <%= @organization.teamsize %></p>
+  <p>Webstie: <%= @organization.website %></p>
+  <p>twitter: <%= @organization.twitter %></p>
+  <% if @organization.published === true %>
+  <p>Published</p>
+  <% else %>
+  <p>Not published</p>
+  <% end %>
+</div>
