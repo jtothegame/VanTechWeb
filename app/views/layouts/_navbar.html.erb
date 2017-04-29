@@ -29,13 +29,13 @@
 <!-- signed in USER -->
   <% elsif user_signed_in? %>
   <ul class="right">
-    <%= "#{current_user.name}" %>
+    <li><a class='dropdown-button' href='#' data-activates='dropdown1'><%= "#{current_user.name}" %></a></li>
     <li class="waves-effect waves-light">
-      <%= link_to 'Logout', destroy_user_session_path,
-        method: :delete, data: {confirm: 'Logout?'} %>
+
     </li>
   </ul>
 
+  <!-- not signed in -->
   <% else %>
   <ul class="right">
     <li style="padding-right:5px;">Welcome friend! </li>
@@ -43,11 +43,6 @@
     <li><%= link_to 'Login', new_user_session_path %> </li>
   </ul>
   <% end %>
-
-<!-- not signed in -->
-
-
-
 
   </div>
 </nav>
@@ -58,5 +53,6 @@
   <li><a href="#!">Dashboard</a></li>
   <li><a href="#!">Settings</a></li>
   <li class="divider"></li>
-  <li><a href="#!">Logout</a></li>
+  <li><a href="#!"><%= link_to 'Logout', destroy_user_session_path,
+    method: :delete, data: {confirm: 'Logout?'} %></a></li>
 </ul>
