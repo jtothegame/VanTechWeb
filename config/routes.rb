@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   resources :events, only: [:index]
 
-  resources :news, only: [:index]
+  resources :articles, only: [:index]
 
   resources :managers, only: [:new, :create]
 
