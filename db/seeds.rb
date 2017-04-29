@@ -110,17 +110,8 @@ organization_list = [
     ["Radiant Communications","1600-1050 W Pender Vancouver, Vancouver, V6E 4T3","Leveraging the largest Internet footprint across Canada, Radiant offers a comprehensive portfolio of reliable, secure and scalable enterprise-class voice and data services, simplified under a single point of contact. With over 17 years of experience, supporting over 20,000 business locations across Canada and the U.S., our customers trust us to deliver IT infrastructure solutions to support their mission-critical applications.",110,25,"http://www.radiant.net","https://twitter.com/@Radiant_Comm",true
     ],
     ["ZenHub","505 - 55 Water Street  Vancouver, BC V6B 1A1","To build amazing
-    software, be where the software lives."45,14,"www.zenhub.com",
-    "https://twitter.com/zenhubhq", true ],
-    ["Payfirma", "1185 W Georgia St #740, Vancouver, BC V6E 4E6", "We help
-      businesses accept online and mobile payments with a single platform."]
-
-
-
-
-
-
-
+    software, be where the software lives.",45,14,"http://www.zenhub.com",
+    "https://twitter.com/zenhubhq", true ]
   ]
 
 
