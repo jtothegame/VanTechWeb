@@ -580,8 +580,138 @@ organization_list = [
     to make financial planning and investing more efficient and convenient,
     but also have a team of dedicated financial advisors who work with every
     client to help them plan and achieve their financial goals.",50,10,
-    "http://www.wealthbar.com","http://twitter.com/wealthbar",true]
- ]
+    "http://www.wealthbar.com","http://twitter.com/wealthbar",true],
+
+    ["Proxxi", "46 WEST 6TH AVENUE, VANCOUVER, BC, V5Y 1K1, CANADA", "The first
+      product we have built is the Proxxi Band which addresses the risk of
+      electrical injury faced by 20 million US industrial employees on a daily
+      basis. Proxxi Band notifies the wearer by vibration (haptic feedback) when
+      they get too close to an electrically energized device. Targeted initially
+      at utility workers and electrical field services, it is a device that
+      provides companies peace of mind and visibility through connected monitoring
+      and insights into employee behavior.Currently, there are no ambient, connected,
+      always-on devices used to detect electricity. Workers currently rely on
+      outdated processes technology to protect themselves. Proxxi provides that
+      fail safe backup to virtually eliminate the risk.",6,6,"proxxiband.com",
+      "https://twitter.com/@proxxiband", true],
+    ["Weddingful", "609 W Hastings St, Vancouver, BC V6B", "Wedding Social Community
+      with thousands of local brides and vendors providing the best wedding
+      planning experience.",43, 16, "www.weddingful.com",
+      "https://twitter.com/weddingful",true],
+    ["Harp Platform","1050 W Pender St, Vancouver, BC V6E 3S7","The Harp Platform
+      is a new kind of platform for developing and deploying applications, mobile
+      applications and web sites. By combining the power and ease of Dropbox with
+      robust developer tools and cloud infrastructure we make getting online easier
+      and faster then ever before.", 6,2, "www.harp.io", "https://twitter.com/harpplatform",
+    true ],
+    ["FusionPipe Software", "1400 - 1055 West Hastings Street Vancouver, BC V6E 2E9",
+      "QuikID™, FusionPipe's innovative authentication solution uses unique patented
+      technologies to provide enhanced user convenience and increased data security
+      for enterprises, mobile field workers, healthcare and government.QuikID™
+      empowers employees to use a mobile device or wearable as a replacement
+      for manually typing complex passwords and as a secure alternative for
+      physical smart cards and other types of send factor authentication.", 34,
+      19, "www.fusionpipe.com", "https://twitter.com/FusionPipe", true],
+     ["Retsly","1122 Mainland St #406, Vancouver, BC V6B 5L1", "1122 Mainland St
+       #406, Vancouver, BC V6B 5L1", 5,5, "www.rets.ly", "https://twitter.com/retsly",
+       true],
+    ["BlueBat","6th Floor, 210 W Broadway, Vancouver, BC V5Y 3W2", "BlueBat's vision
+       is to become the world's leading B2B social casino middleware service for
+       the thousands of casinos globally that will be coming online in the next
+       2-3 years.", 6,6,"www.bluebatgames.com", "https://twitter.com/BlueBatGames",
+       true],
+       ["Musefind","289 Abbott St #300, Vancouver, BC V6B 2K7","Recreating the
+       romance between brands and their audiences, through influencers.Our
+       platform is a weapon for brands to orchestrate influencers, compose c
+       ontent, and mesmerize millions.",10,1,"https://musefind.com/",
+       "https://twitter.com/themusefind",true
+     ],
+     ["Curatio","555 W Hastings St #1200, Vancouver, BC V6B 4N4","Our solution
+       combines patient matchmaking and private social networking with disease
+       self-management tools. We are a mobile SaaS business that has completely
+       bootstrapped off sales and awards in our first year with no outside
+       financing to date",10,1,"http://www.curatio.me/","https://twitter.com/@curatiome",true
+     ],
+     ["Taski","Hootsuite HQ2, 111 East 5th Ave","Taski is an online marketplace
+       for hospitality staff on demand. Hospitality has the largest turnover rates
+       of all industries, costing businesses time and capital on constantly
+       rehiring staff.",10,1,"http://www.taskiapp.com","https://twitter.com/taskimobile",true
+     ],
+     ["KeyCafe","211 Robson St, Vancouver, BC V6B","Keycafe makes it easy to
+       share the keys to your home or rental property. Let guests, friends and
+       family into your home without having to be there.",50,8,
+       "http://www.keycafe.com","https://twitter.com/key_cafe",true
+     ],
+     ["Koho"," 202, 25 E 6th Ave, Vancouver, BC V5T 1J3","With a web app,
+       mobile app and card, Koho offers Canadians a secure, simple and transparent
+       way to access their money. For too long, banking has lagged behind the
+       technical experiences GenY expects. Koho's no fee, banking alternative
+       offers a means to change that.",50,6,"http://www.koho.ca",
+       "https://twitter.com/getkoho",true
+     ],
+     ["Control","322 Water Street – 3rd Floor, Vancouver BC, V6B 1B6","Control is
+       a leading payment analytics and alerts platform for SaaS, subscription and
+       eCommerce businesses, enabling instant intelligence anywhere via its
+       Android, iOS, and web-based products.",50,6,"http://www.getcontrol.co",
+       "https://twitter.com/GetControlApp",true
+     ],
+     ["Spare Labs","Suite 600, Two Bentall Centre 555 Burrard Street,Vancouver,
+       BC V7X 1M8","Spare Labs is building shared mobility technology for the
+       modern world. The company was founded on one idea - data-driven mobility.
+       Companies use our award-winning platform to launch, operate, and scale
+       autonomous and new mobility services, including ridesharing, smart shuttles,
+        and custom solutions.",10,1,"http://www.sparelabs.com",
+        "https://twitter.com/sparelabs",true
+     ],
+     ["Wiivv","402-134 Abbott St, Vancouver, BC V6B 2K4","Our products make humans more durable.",
+       50,4,"https://wiivv.com/","https://wiivv.com/",true
+     ],
+     ["CommandWear","Suite 1400-1055 West Hastings Street Vancouver BC V6E 2E9",
+       "CommandWear is specializing in the user experience and software for a new
+       class of wearable devices. Our target is the global public safety & security
+          market who are looking for better ways to track and communicate with
+          personnel in the field and reduce response times during any type of
+          crisis, major event or disaster. The solution is also fulfilling lone
+          worker tracking and safety for field workers and public safety agencies.
+          Workers can be tracked in real-time while in remote areas and they use
+          the simple smartwatch app to check-in and send alarms when needing assistance.",
+          10,1,"http://www.commandwear.com","https://twitter.com/commandwear",true
+     ],
+     ["Eastside Games","116 W Hastings St, Vancouver, BC V6B 1G8","East Side
+       Games is a proudly independent and profitable game studio creating humorous
+       and addicting games for mobile and social platforms.",10,1,"http://www.eastsidegames.com",
+       "https://twitter.com/EastSideGames",true
+     ],
+     ["Lemonstand","525 Seymour St, Vancouver, BC V6B 3H7","LemonStand helps web
+       developers, agencies and fast growing brands create beautiful online stores
+        that stand out from the crowd and sell more.",50,11,
+        "http://www.lemonstand.com","https://twitter.com/LemonStand",true
+     ],
+     ["Ritual","774 Denman St, Vancouver, BC V6G 1C9","We're building a
+       unique marketplace to allow content creators to search and license music as
+       efficiently as possible. Modern content creators want to be able to use
+       world’s best music at a fair price. Purchased with an easy-to-use licensing
+       model, taking seconds, not days or weeks. They also need to find the music
+       as quickly as possible. One of our primary goals is to create a highly
+       intuitive search and filter system that mimics the emotional resonance
+       of music beyond simple meta-tagging. Instead we want to create an experience
+       that lets users discover relevant music by accounting for the more abstract
+       characteristics of songs, which are easy to feel, yet tough to articulate.
+       We’ve built a system of developing and retaining some of the world’s best
+       music producers, who are responsible for writing, recording and playing
+       alongside: Sia, Lorde, Selena Gomez, Walk The Moon, Hedley, and Tegan
+       and Sara, among others.",15,3,"http://www.ritualmusic.com",
+       "https://twitter.com/ritualmusic",true
+     ],
+     ["Spacelist","717 W Pender St, Vancouver, BC V6C 1G9","SpaceList is a
+       marketplace for office, retail and industrial space. We host 1/2 billion
+       square feet of available space and generate over 100 inquiries each day.",
+       10,1,"http://www.spacelist.ca","https://twitter.com/SpaceList",true
+     ],
+     ["Pixel Union","1005 Langley St, Victoria, BC V8W","Exceptional design and
+       UX for ecommerce and products.",50,10,"http://www.pixelunion.net",
+       "https://twitter.com/pixelunion",true]
+     ]
 
 
   organization_list.each do |name, address, overview, employees, teamsize,
