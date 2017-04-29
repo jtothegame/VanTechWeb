@@ -11,9 +11,17 @@
 
 <!-- need to implement devise here. see user md file in /layouts/ -->
     <ul class="right">
-      <li><%= link_to 'Sign Up', new_user_registration_path %> </li>
-      <li><%= link_to 'Login', new_user_session_path %> </li>
+      <% if user_signed_in? %>
+      <%= "#{current_user.name}" %>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, data: {confirm: 'Logout?'} %> </li>
+        <% else %>
+        <li><%= link_to 'Sign Up', new_user_registration_path %> </li>
+        <li><%= link_to 'Login', new_user_session_path %> </li>
+      <% end %>
+
     </ul>
+
+
 
   </div>
 </nav>
