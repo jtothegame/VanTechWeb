@@ -41,6 +41,7 @@ gem 'faker', github: 'stympy/faker'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
 
+
 gem 'administrate', '0.4.0'
 
 # Use Capistrano for deployment
