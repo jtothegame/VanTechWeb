@@ -3,5 +3,5 @@ class Organization < ApplicationRecord
   has_one :user, through: :managers
   has_many :tags, through: :tagging
 
-  validations: 
+
 end
