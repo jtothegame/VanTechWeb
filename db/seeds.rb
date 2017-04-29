@@ -472,8 +472,6 @@ organization_list = [
           50,10,"http://www.pandoo.cc/","https://twitter.com/PandooTEKInc",true
        ]
 ]
-
-
   organization_list.each do |name, address, overview, employees, teamsize,
     website,twitter,published|
     Organization.create(name: name, address: address, overview: overview,
