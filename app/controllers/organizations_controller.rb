@@ -1,6 +1,10 @@
 class OrganizationsController < ApplicationController
   before_action :authenticate_user!
   before_action :find_organization, only:[:show]
+  
+  def index
+  end  
+  
   def new
     @organization = Organization.new
   end

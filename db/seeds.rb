@@ -33,6 +33,7 @@ User.create(name: "Nic",
             password: "qweqwe",
             password_confirmation: "qweqwe")
 
+
 puts "Nic created!"
 
 User.create(name: "Admin",
@@ -40,7 +41,6 @@ User.create(name: "Admin",
             email: 'admin@gmail.com',
             password: 'qweqwe',
             password_confirmation: 'qweqwe',
-
             admin: true)
 puts "Admin created!"
 
@@ -472,9 +472,8 @@ organization_list = [
           computer. Among many features, PANDOO provides personalization services,
           unprecedented speed, unlimited cloud storage and it's a 100% FREE!",
           50,10,"http://www.pandoo.cc/","https://twitter.com/PandooTEKInc",true
-
-       ],
-       ["LoginRadius","1281 W Georgia St, Vancouver, BC V6E 3J7","LoginRadius is
+        ],
+        ["LoginRadius","1281 W Georgia St, Vancouver, BC V6E 3J7","LoginRadius is
          a leading Customer Identity and Access Management (cIAM) platform serving
          over 150,000 web and mobile applications worldwide and managing
          identities of over 650 million users.", 42,22,"www.loginradius.com",
