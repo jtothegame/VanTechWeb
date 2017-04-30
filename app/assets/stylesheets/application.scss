@@ -15,28 +15,43 @@ body {
 main {
     flex: 1 0 auto;
 }
-footer{
-  // position:sticky;
+header{
+  position: relative;
+  z-index: 1;
+  height:64px;
 }
+footer{
+  position: relative;
+  z-index: 1;
+}
+
 h1,h2,h3,h4,h5{
   font-family: 'Ubuntu', sans-serif;
 }
 
 .body-content{
-  // position:relative;
-  top:64px;
+  top:50px;
   padding-left: 50px;
-  z-index: 1;
-  // left:50px;
-  // need to fix the right overscan
   width: 100%;
 }
 
-#side-nav{
-  width: 55px;
-  height: 101vh;
-  background-color: rgb(96, 104, 105);
+.side-nav{
   position: absolute;
+  z-index: -1;
+  width: 90px;
+  // left: 50%;
+
+  height: 100%;
+  padding-top:65px;
+  color: white;
+  background-color: rgb(96, 96, 96);
+  // justify-content: center;
+  // position: absolute;
+}
+
+#side-nav-list{
+width:55px;
+margin-top:65px;
 
 }
 
@@ -53,4 +68,8 @@ h1,h2,h3,h4,h5{
 
 .justify{
   text-align: justify;
+}
+
+.tooltipped{
+  padding: 0;
 }
