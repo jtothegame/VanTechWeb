@@ -3,7 +3,7 @@
     <div>
       <h3>Update organization</h3>
     </div>
-    <%= form_for @organization do |f| %>
+    <%= form_for @organization, html: { multipart: true } do |f| %>
 
       <%= f.label :name %><br>
       <%= f.text_field :name%>
@@ -26,11 +26,17 @@
       <%= f.label :twitter %><br>
       <%= f.text_field :twitter%>
 
+      <%= f.label :icon %><br>
+      <%= f.file_field :icon%><br>
+
+      <%= f.label :header %><br>
+      <%= f.file_field :header%><br><br>
+
       <%= f.label :Technology %><br>
       <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name,
                                       {},
                                       { multiple: true, class:'browser-default chosen-select'}%>
-      <br><br>                             
+      <br><br>
       <div class="right">
         <%= button_tag( :class => "btn") do %>
         Save Changes<i class="material-icons right">send</i>

@@ -1,4 +1,8 @@
 class Organization < ApplicationRecord
+
+  mount_uploader :icon
+  mount_uploader :header
+
   has_one :manager
   has_one :user, through: :manager
   has_many :photos
