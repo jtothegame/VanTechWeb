@@ -766,12 +766,12 @@ organization_list = [
     Tag.create(name: t)
   end
 
-  20.times do
-    tag = Tag.all.sample
-    organization = Organization.all.sample
-    Tagging.create( tag: tag,
-                      organization: organization
-                    )
+  Organization.all.each do |org|
+    Tag.all.sample(3).each do |tag|
+      Tagging.create( tag: tag,
+                        organization: org
+                      )
+    end
   end
 
 
