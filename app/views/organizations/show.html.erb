@@ -22,8 +22,33 @@
     <p>Not published</p>
     <% end %>
   </div>
+  <div style='width: 800px;'>
+    <div id="map" style='width: 800px; height: 400px;'></div>
+  </div>
   <% if @organization.user == current_user %>
     <%= link_to "Edit Organization", edit_organization_path(@organization), class: "btn"%>
   <% end %>
 </div>
+  <script src="//maps.google.com/maps/api/js?key=<%=ENV['GOOGLE_MAPS_API_KEY'] %>"></script>
+  <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
+  <script>
+    handler = Gmaps.build('Google');
+      handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+        var markers = handler.addMarkers([
+          {
+              "lat": <%= @organization.lat %>,
+              "lng": <%= @organization.long %>,
+              "picture": {
+                  "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
+                  "width":  32,
+                  "height": 32
+              },
+              "infowindow": "hello!"
+          }
+        ]);
+        handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
+  </script>
+
 </div>
