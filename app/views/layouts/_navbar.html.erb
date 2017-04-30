@@ -9,10 +9,10 @@
 <!-- logo and brand -->
 <ul class="left">
 
-<a href="/" class=" left">
+<li><a href="/" class=" left">
   <%= image_tag("logo.png", class: "") %>
     <!-- <img style=" margin-left: 50px; margin-top: 10px;" src="logo.png" alt=""> -->
-  </a>
+  </a></li>
 </ul>
 
 
@@ -26,10 +26,10 @@
 <!-- signed in USER -->
   <% elsif user_signed_in? %>
   <ul class="right">
-    <li><a class='dropdown-button' href='#' data-activates='dropdown1'><%= "#{current_user.name}" %></a></li>
-    <li class="waves-effect waves-light">
-
-    </li>
+    <ul class="right">
+      <li><a>Hello <%= "#{current_user.name}" %></a></li>
+      <li><a><img  class='dropdown-button small-dp' href='#' data-activates='dropdown1' src="assets/user_placeholder.jpg" alt=""></a></li>
+    </ul>
   </ul>
 
   <!-- not signed in -->
@@ -49,12 +49,21 @@
 <!-- should switch to erb tags after -->
 <ul id="dropdown1" class="dropdown-content">
   <% if user_signed_in? && current_user.admin? %>
-  <li><a>Admin enabled</a></li>
-  <% end %>
-
-  <li><a href="#!">Profile</a></li>
-  <li><a href="#!">Dashboard</a></li>
+  <li><a href>Admin dashboard</a></li>
   <li><a href="#!">Settings</a></li>
   <li class="divider"></li>
+  <li class="waves-effect waves-light">
+    <%= link_to 'Logout', destroy_user_session_path,
+        method: :delete, data: {confirm: 'Logout?'} %>
+  </li>
 
+  <% else %>
+  <li><a href="#!">Profile</a></li>
+  <li><a href="#!">Settings</a></li>
+  <li class="divider"></li>
+  <li class="waves-effect waves-light">
+    <%= link_to 'Logout', destroy_user_session_path,
+        method: :delete, data: {confirm: 'Logout?'} %>
+  </li>
+  <% end %>
 </ul>
