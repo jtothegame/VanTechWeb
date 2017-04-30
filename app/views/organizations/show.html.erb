@@ -5,10 +5,10 @@
     <p>Title: <%= @organization.name %></p>
     <p>Address: <%= @organization.address %></p>
     <p>Overview: <%= @organization.overview %></p>
-    <p>Employees size: <%= @organization.employees %></p>
-    <p>Tech team size: <%= @organization.teamsize %></p>
-    <p>Webstie: <%= @organization.website %></p>
-    <p>twitter: <%= @organization.twitter %></p>
+    <p>Number of Employees: <%= @organization.employees %></p>
+    <p>Tech Team Size: <%= @organization.teamsize %></p>
+    <p>Website: <%= @organization.website %></p>
+    <p>Twitter: <%= @organization.twitter %></p>
     <span>Technology: </span>
     <% @organization.tags.each do |t| %>
     <div class="chip">
