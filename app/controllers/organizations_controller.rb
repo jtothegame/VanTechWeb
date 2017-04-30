@@ -1,12 +1,14 @@
 class OrganizationsController < ApplicationController
   before_action :authenticate_user!
   before_action :find_organization, only:[:show]
-  
+  before_action :new_tag?, only:[:create]
+
   def index
-  end  
-  
+  end
+
   def new
     @organization = Organization.new
+
   end
 
   def create
@@ -28,6 +30,16 @@ class OrganizationsController < ApplicationController
   end
 
   def organization_params
-    params.require(:organization).permit([:name, :address, :overview, :employees, :teamsize, :website, :twitter])
+    params.require(:organization).permit([:name, :address, :overview, :employees, :teamsize, :website, :twitter, { tag_ids:[] }])
+  end
+
+  def new_tag?
+    if params['tag'].present?
+      tag_names = params['tag']['name'].split(',')
+      new_tags = tag_names.map { |tag| Tag.create(name: tag.strip) }
+      if new_tags.compact.present?
+        params['organization']['tag_ids'] += new_tags.pluck(:id)
+      end
+    end
   end
 end

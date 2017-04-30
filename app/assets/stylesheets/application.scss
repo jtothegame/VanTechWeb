@@ -7,12 +7,50 @@
 @import "bourbon";
 @import "materialize";
 
-html, body {
-  height: 100%;
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+footer{
+  // position:sticky;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.body-content{
+  // position:relative;
+  top:64px;
+  padding-left: 50px;
+  z-index: 1;
+  // left:50px;
+  // need to fix the right overscan
+  width: 100%;
 }
 
 #side-nav{
   width: 55px;
-  height: 100vh;
+  height: 101vh;
   background-color: rgb(96, 104, 105);
+  position: absolute;
+
+}
+
+.small-dp{
+  width: 50px;
+  padding-top: 5px;
+  border-radius: 50%;
+}
+
+.top-brand-logo{
+  padding-left:50px;
+  margin-top: 10px;
+}
+
+.justify{
+  text-align: justify;
 }

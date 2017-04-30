@@ -721,6 +721,23 @@ organization_list = [
      twitter: twitter, published: published)
   end
 
+  ["PHP", "javaScript", "Ruby", "HTML", "Rails", "C#", "C++", "go", "Python",
+    "Css", "React.js", "Angular", "AJAX", "Node.js", "Express.js", "MySql",
+    "Docker", "Bootstrap", "CoffeeSript", "Pug", "Perl", "Postgres", "Less",
+    "Sass", "MangoDB", "Git", "Ember", "Django", "Swift", "Elixir" ].each do |t|
+    Tag.create(name: t)
+  end
+
+  20.times do
+    tag = Tag.all.sample
+    organization = Organization.all.sample
+    Tagging.create( tag: tag,
+                      organization: organization
+                    )
+  end
+
+
+
 #
 # address:
 # overview:

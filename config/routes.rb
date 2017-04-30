@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: 'registrations' }
 
-  resources :organizations, only: [:new, :show, :create, :edit, :update]
+  resources :organizations, only: [:index, :new, :show, :create, :edit, :update]
 
   resources :events, only: [:index]
 
@@ -22,6 +22,11 @@ Rails.application.routes.draw do
   resources :managers, only: [:new, :create]
 
   resources :directory, only: [:index]
+
+  resources :tags, only: [:create]
+
+  resources :about, only: [:index]
+
 
   root 'home#index'
 end

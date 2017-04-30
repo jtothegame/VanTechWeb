@@ -45,7 +45,13 @@ class NewsSearchTermDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how news search terms are displayed
   # across all pages of the admin dashboard.
   #
+
   # def display_resource(news_search_term)
   #   "NewsSearchTerm ##{news_search_term.id}"
   # end
+
+  def display_resource(news_search_term)
+    news_search_term.name
+  end
+
 end
