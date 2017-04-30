@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     resources :photos
     resources :headers
     resources :icons
+    resources :news_search_terms
+    resources :events_search_terms
 
     root to: "users#index"
   end

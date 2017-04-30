@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class NewsSearchTermDashboard < Administrate::BaseDashboard
+class EventsSearchTermDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -42,10 +42,10 @@ class NewsSearchTermDashboard < Administrate::BaseDashboard
     :name,
   ].freeze
 
-  # Overwrite this method to customize how news search terms are displayed
+  # Overwrite this method to customize how events search terms are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(news_search_term)
-  #   "NewsSearchTerm ##{news_search_term.id}"
+  # def display_resource(events_search_term)
+  #   "EventsSearchTerm ##{events_search_term.id}"
   # end
 end
