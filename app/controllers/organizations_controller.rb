@@ -1,7 +1,7 @@
 class OrganizationsController < ApplicationController
   before_action :authenticate_user!
   before_action :find_organization, only:[:show, :edit, :update]
-  before_action :new_tag?, only:[:create]
+
 
   def index
   end
@@ -26,11 +26,11 @@ class OrganizationsController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
     if @organization.update(organization_params) && @organization.user == current_user
+
       redirect_to organization_path(@organization)
     else
       render :edit
@@ -47,13 +47,4 @@ class OrganizationsController < ApplicationController
     params.require(:organization).permit([:name, :address, :overview, :employees, :teamsize, :website, :twitter, { tag_ids:[] }])
   end
 
-  def new_tag?
-    if params['tag'].present?
-      tag_names = params['tag']['name'].split(',')
-      new_tags = tag_names.map { |tag| Tag.create(name: tag.strip) }
-      if new_tags.compact.present?
-        params['organization']['tag_ids'] += new_tags.pluck(:id)
-      end
-    end
-  end
 end
