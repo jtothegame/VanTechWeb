@@ -24,7 +24,6 @@ class ManagerDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :user,
     :organization,
-    :id,
     :approved,
   ].freeze
 

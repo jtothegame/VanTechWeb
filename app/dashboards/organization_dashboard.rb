@@ -10,6 +10,7 @@ class OrganizationDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     manager: Field::HasOne,
     user: Field::HasOne,
+    photos: Field::HasMany,
     tags: Field::HasMany,
     taggings: Field::HasMany,
     id: Field::Number,
@@ -20,13 +21,13 @@ class OrganizationDashboard < Administrate::BaseDashboard
     teamsize: Field::Number,
     website: Field::String,
     twitter: Field::String,
-    logo: Field::String,
     published: Field::Boolean,
-    photos: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     lat: Field::Number.with_options(decimals: 2),
     long: Field::Number.with_options(decimals: 2),
+    icon: Field::String,
+    header: Field::String,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -35,13 +36,9 @@ class OrganizationDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-
-    :manager,
-    :user,
-    :tags,
-    :taggings,
+    :id,
     :name,
-    :address,
+    :published
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -49,6 +46,7 @@ class OrganizationDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :manager,
     :user,
+    :photos,
     :tags,
     :taggings,
     :id,
@@ -59,23 +57,19 @@ class OrganizationDashboard < Administrate::BaseDashboard
     :teamsize,
     :website,
     :twitter,
-    :logo,
     :published,
-    :photos,
     :created_at,
     :updated_at,
     :lat,
     :long,
+    :icon,
+    :header,
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :manager,
-    :user,
-    :tags,
-    :taggings,
     :name,
     :address,
     :overview,
@@ -83,11 +77,16 @@ class OrganizationDashboard < Administrate::BaseDashboard
     :teamsize,
     :website,
     :twitter,
-    :logo,
     :published,
-    :photos,
     :lat,
     :long,
+    :icon,
+    :header,
+    :manager,
+    :user,
+    :photos,
+    :tags,
+    :taggings,
   ].freeze
 
   # Overwrite this method to customize how organizations are displayed
