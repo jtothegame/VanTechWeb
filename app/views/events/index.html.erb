@@ -1,16 +1,19 @@
 <div class="body-content">
 <div class="container">
 
-<div class="row">
-  <div class="col m4" style='padding-top:130px;'>
-    <img class='responsive-img' src="https://assets.materialup.com/uploads/e532d4a8-9076-470b-8ad8-3c11004a860b/teal.png" alt="">
-  </div>
-  <div class="col m8">
+  <div class="card">
+      <div class="card-content">
+        <h3>EVENTS LIST</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>      </div>
+      <div class="card-content">
+        <%= month_calendar do |date| %>
+          <%= date.strftime("%d") %>
+          <div class="">
+            <a href="#">events here</a>
+          </div>
+        <% end %>
+      </div>
+    </div>
 
-  <h1>EVENTS list</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-</div>
 </div>
 </div>

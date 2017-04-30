@@ -56,6 +56,8 @@ gem 'administrate', '0.4.0'
 gem 'dotenv-rails'
 >>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
 
+gem "simple_calendar", "~> 2.0"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
