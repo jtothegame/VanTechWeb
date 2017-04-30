@@ -7,9 +7,10 @@ for all resources in the admin dashboard,
 as defined by the routes in the `admin/` namespace
 %>
 
+
 <ul class="sidebar__list">
   <br>
-  <%= image_tag ('assets/logo.png') %>
+  <%= image_tag 'logo_teal.png' %>
   <li>Welcome, Admin</li>
 
   <% Administrate::Namespace.new(namespace).resources.each do |resource| %>
@@ -21,5 +22,5 @@ as defined by the routes in the `admin/` namespace
       ) %>
     </li>
   <% end %>
-  <li style='color:red' class='sidebar__link'>Leave dashboard</li>
+  <li style='color:red' class='sidebar__link'><%= link_to "Leave Dashboard", root_path %></li>
 </ul>
