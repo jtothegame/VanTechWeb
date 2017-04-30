@@ -24,7 +24,10 @@ class ManagerDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :user,
     :organization,
+<<<<<<< HEAD
     :id,
+=======
+>>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
     :approved,
   ].freeze
 
@@ -51,7 +54,13 @@ class ManagerDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how managers are displayed
   # across all pages of the admin dashboard.
   #
+<<<<<<< HEAD
   # def display_resource(manager)
   #   "Manager ##{manager.id}"
   # end
+=======
+  def display_resource(manager)
+    "#{manager.user.email} - #{manager.organization.name}"
+  end
+>>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
 end

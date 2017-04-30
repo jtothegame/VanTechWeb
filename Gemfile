@@ -41,8 +41,20 @@ gem 'faker', github: 'stympy/faker'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
 
+<<<<<<< HEAD
 
 gem 'administrate', '0.4.0'
+=======
+gem 'httparty'
+
+gem 'geocoder'
+
+gem 'gmaps4rails'
+
+gem 'administrate', '0.4.0'
+
+gem 'dotenv-rails'
+>>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

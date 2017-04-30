@@ -1,0 +1,43 @@
+<div class="body-container">
+  <div class="container">
+    <div>
+      <h3>Update organization</h3>
+    </div>
+    <%= form_for @organization do |f| %>
+
+      <%= f.label :name %><br>
+      <%= f.text_field :name%>
+
+      <%= f.label :address %><br>
+      <%= f.text_field :address%>
+
+      <%= f.label :overview %><br>
+      <%= f.text_field :overview%>
+
+      <%= f.label :employees %><br>
+      <%= f.text_field :employees, placeholder: "Number of employees"%>
+
+      <%= f.label :teamsize %><br>
+      <%= f.text_field :teamsize, placeholder: "Number of tech teamsize"%>
+
+      <%= f.label :website %><br>
+      <%= f.text_field :website%>
+
+      <%= f.label :twitter %><br>
+      <%= f.text_field :twitter%>
+
+      <%= f.label :Technology %><br>
+      <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name,
+                                      {},
+                                      { multiple: true, class:'browser-default chosen-select'}%>
+      <br><br>                             
+      <div class="right">
+        <%= button_tag( :class => "btn") do %>
+        Save Changes<i class="material-icons right">send</i>
+        <% end %>
+      </div>
+    <% end %>
+    <br>
+
+  </div>
+</div>

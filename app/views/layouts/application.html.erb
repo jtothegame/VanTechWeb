@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TechNest</title>
+    <title>VanTech Web</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
     <%= render 'layouts/navbar' %>
-    <%= render 'layouts/sidenav' %>
 
+<<<<<<< HEAD
 <!-- add dialogues instead -->
 <div class="right">
 
@@ -22,10 +23,19 @@
 </div>
 
 
+=======
+  <div class="center">
+    <% flash.each do |message_type, message| %>
+      <%= javascript_tag "Materialize.toast('#{message}', 4000)" %>
+    <% end %>
+  </div>
+>>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
 
+  <main>
     <%= yield %>
+  </main>
 
-    <%= render 'layouts/footer' %>
+  <%= render 'layouts/footer' %>
 
   </body>
 </html>
