@@ -6,19 +6,18 @@
 
     <ul id="" class="">
 
-      <br>
+      <li><%= link_to '<i class="material-icons">home</i>'.html_safe, root_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Home'} %></li>
 
-      <li><%= link_to '<i class="material-icons lrg">home</i>'.html_safe, root_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Home'} %></li>
+<!-- probably get rid of dashboard -->
+      <li><%= link_to '<i class="material-icons">explore</i>'.html_safe, organizations_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Explore'} %></li>
 
-      <li><%= link_to '<i class="material-icons lrg">dashboard</i>'.html_safe, root_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Dashboard'} %></li>
+      <li><%= link_to '<i class="material-icons">event</i>'.html_safe, events_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Events'} %></li>
 
-      <li><%= link_to '<i class="material-icons lrg">explore</i>'.html_safe, organizations_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Explore'} %></li>
+      <li><%= link_to '<i class="material-icons">library_books</i>'.html_safe, articles_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Articles'} %></li>
 
-      <li><%= link_to '<i class="material-icons lrg">event</i>'.html_safe, events_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Events'} %></li>
+      <li><%= link_to '<i class="material-icons">business</i>'.html_safe, organizations_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Organizations'} %></li>
 
-      <li><%= link_to '<i class="material-icons lrg"><i class="material-icons">chrome_reader_mode</i></i>'.html_safe, articles_path, class: 'tooltipped', data: { position: 'right', tooltip: 'News'} %></li>
-
-      <li><%= link_to '<i class="material-icons lrg">event</i>'.html_safe, about_index_path, class: 'tooltipped', data: { position: 'right', tooltip: 'About'} %></li>
+      <li><%= link_to '<i class="material-icons">tag_faces</i>'.html_safe, about_index_path, class: 'tooltipped', data: { position: 'right', tooltip: 'About us'} %></li>
 
     </ul>
   </nav>

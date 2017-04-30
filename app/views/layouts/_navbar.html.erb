@@ -1,27 +1,26 @@
 <!-- top nav is for sessions, profile and logo (left side) -->
 <!-- all site navigation will be done on the side nav -->
 
-<nav style="background-image: url(geo_final.jpg); background-size: 100%">
-  <div  >
+  <nav style="background-image: url(assets/geo_final.jpg); background-size: 100%">
+
+<!-- style="background-image: url(geo_final.jpg); background-size: 100% -->
+  <div>
 
 <!-- logo and brand -->
+<ul class="left">
 
+<a href="/" class=" left">
+  <%= image_tag("logo.png", class: "") %>
+    <!-- <img style=" margin-left: 50px; margin-top: 10px;" src="logo.png" alt=""> -->
+  </a>
+</ul>
 
-  <a href="/" class="brand-logo left">
-    <img style=" margin-left: 50px; margin-top: 10px;" src="logo.png" alt="">
-    </a>
-
-<!-- need to implement devise here. see user md file in /layouts/ -->
 
 <!-- signed in ADMIN -->
 <% if user_signed_in? && current_user.admin? %>
   <ul class="right">
-    <span style='color:red'>You are adminnnnn</span>
-    <%= "#{current_user.name}" %>
-    <li class="waves-effect waves-light">
-      <%= link_to 'Logout', destroy_user_session_path,
-          method: :delete, data: {confirm: 'Logout?'} %>
-    </li>
+    <li><a>Hello <%= "#{current_user.name}" %></a></li>
+    <li><a><img  class='dropdown-button small-dp' href='#' data-activates='dropdown1' src="assets/admin.jpg" alt=""></a></li>
   </ul>
 
 <!-- signed in USER -->
@@ -43,31 +42,19 @@
   <% end %>
 
   </div>
-
-<!-- form searchbar -->
-<!-- will need proper paths later -->
-  <form>
-    <div class="input-field">
-      <input id="search" type="search" required>
-      <label class="label-icon" for="search">
-        <i class="material-icons">search</i></label>
-      <i class="material-icons">close</i>
-    </div>
-  </form>
-
-
-
 </nav>
 
 <!-- IF SIGNED IN dropdown profile menu, leave where it is -->
 <!-- add icons, fix alignment later -->
 <!-- should switch to erb tags after -->
 <ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!"><i class="left material-icons lrg">settings</i>Profile</a></li>
+  <% if user_signed_in? && current_user.admin? %>
+  <li><a>Admin enabled</a></li>
+  <% end %>
+
+  <li><a href="#!">Profile</a></li>
   <li><a href="#!">Dashboard</a></li>
   <li><a href="#!">Settings</a></li>
   <li class="divider"></li>
 
-  <li><a href="#!"><%= link_to 'Logout', destroy_user_session_path,
-    method: :delete, data: {confirm: 'Logout?'} %></a></li>
 </ul>
