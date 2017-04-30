@@ -1,24 +1,29 @@
-
 <div class="body-content">
 <div class="container">
 
-<div class="">
-  <p>Title: <%= @organization.name %></p>
-  <p>Address: <%= @organization.address %></p>
-  <p>Overview: <%= @organization.overview %></p>
-  <p>Employees size: <%= @organization.employees %></p>
-  <p>Tech team size: <%= @organization.teamsize %></p>
-  <p>Webstie: <%= @organization.website %></p>
-  <p>twitter: <%= @organization.twitter %></p>
-  <span>Technology: </span>
-  <% @organization.tags.each do |t| %>
-  <span><%= t.name %>|</span>
+  <div class="">
+    <p>Title: <%= @organization.name %></p>
+    <p>Address: <%= @organization.address %></p>
+    <p>Overview: <%= @organization.overview %></p>
+    <p>Employees size: <%= @organization.employees %></p>
+    <p>Tech team size: <%= @organization.teamsize %></p>
+    <p>Webstie: <%= @organization.website %></p>
+    <p>twitter: <%= @organization.twitter %></p>
+    <span>Technology: </span>
+    <% @organization.tags.each do |t| %>
+    <div class="chip">
+      <%= t.name %>
+      <i class="close material-icons">close</i>
+    </div>
+    <% end %>
+    <% if @organization.published === true %>
+    <p>Published</p>
+    <% else %>
+    <p>Not published</p>
+    <% end %>
+  </div>
+  <% if @organization.user == current_user %>
+    <%= link_to "Edit Organization", edit_organization_path(@organization), class: "btn"%>
   <% end %>
-  <% if @organization.published === true %>
-  <p>Published</p>
-  <% else %>
-  <p>Not published</p>
-  <% end %>
-</div>
 </div>
 </div>

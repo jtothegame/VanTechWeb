@@ -1,6 +1,6 @@
 class OrganizationsController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_organization, only:[:show]
+  before_action :find_organization, only:[:show, :edit, :update]
   before_action :new_tag?, only:[:create]
 
   def index
@@ -14,6 +14,7 @@ class OrganizationsController < ApplicationController
   def create
     @organization = Organization.new organization_params
     if @organization.save
+      @organization.user = current_user
       redirect_to organization_path(@organization)
     else
       render :new
@@ -23,6 +24,19 @@ class OrganizationsController < ApplicationController
   def show
 
   end
+
+  def edit
+
+  end
+
+  def update
+    if @organization.update(organization_params) && @organization.user == current_user
+      redirect_to organization_path(@organization)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def find_organization
