@@ -1,5 +1,5 @@
-<!-- top nav is for sessions, profile and logo (left side) -->
-<!-- all site navigation will be done on the side nav -->
+<!-- profile should route to user#show page -->
+<!-- settings should route to user#edit page -->
 
   <nav style="background-image: url(assets/geo_final.jpg); background-size: 100%">
 
@@ -13,7 +13,14 @@
 <% if user_signed_in? && current_user.admin? %>
   <ul class="right">
     <li><a>Hello <%= "#{current_user.name}" %></a></li>
-    <li><a><img  class='dropdown-button small-dp' href='#' data-activates='dropdown1' src="assets/admin.jpg" alt=""></a></li>
+
+    <li><a>
+<!-- need to implement if user has icon, use their icon -->
+<!-- else use this default one -->
+      <%# if current_user.icon? %>
+      <%#= current_user.icon %>
+      <%# else %>
+      <img  class='dropdown-button small-dp' href='#' data-activates='dropdown1' src="assets/admin.jpg" alt=""></a></li>
   </ul>
 
 <!-- signed in USER -->
@@ -42,7 +49,7 @@
 <!-- should switch to erb tags after -->
 <ul id="dropdown1" class="dropdown-content">
   <% if user_signed_in? && current_user.admin? %>
-  <li><a href>Admin dashboard</a></li>
+  <li><%= link_to 'Admin Dashboard', admin_root_path %> </li>
   <li><a href="#!">Settings</a></li>
   <li class="divider"></li>
   <li class="waves-effect waves-light">
