@@ -51,7 +51,7 @@ class ManagerDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how managers are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(manager)
-  #   "Manager ##{manager.id}"
-  # end
+  def display_resource(manager)
+    "#{manager.user.email} - #{manager.organization.name}"
+  end
 end
