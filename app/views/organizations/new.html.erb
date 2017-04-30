@@ -1,6 +1,9 @@
 <div class="body-container">
   <div class="container">
     <% if !current_user.organization.present?%>
+      <div>
+        <h3>Create your organization</h3>
+      </div>
       <%= form_for @organization do |f| %>
 
         <%= f.label :name %><br>
@@ -24,36 +27,23 @@
         <%= f.label :twitter %><br>
         <%= f.text_field :twitter%>
 
-        <%= fields_for Tag.new do |tag| %>
-          <%= f.label 'Create New Technology' %><br>
-          <%= tag.text_field :name %>
-        <% end %>
-
         <%= f.label :Technology %><br>
         <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name,
                                         {},
                                         { multiple: true, class:'browser-default chosen-select'}%>
-
-
         <br><br>
-        <%= f.check_box :published, { class: "filled-in" }, 'true', 'false' %>
-        <%= f.label :published%>
-        <br>
-
         <div class="right">
           <%= button_tag( :class => "btn") do %>
           Create Organization<i class="material-icons right">send</i>
           <% end %>
         </div>
-
-      <% end %>
+        <% end %>
     <% else %>
     <!-- when we have link to create new, then change it  -->
-      <p>You have already have one organization!</p>
+      <h3>You have already have one organization!</h3>
+      <%= link_to "Go to your organization", organization_path(current_user.organization), class:"btn"%>
     <% end %>
+    <br>
+
   </div>
 </div>
-
-
-<!-- CINDY please look into implementing this -->
-<!-- http://materializecss.com/chips.html -->

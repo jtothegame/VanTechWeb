@@ -49,6 +49,8 @@ gem 'gmaps4rails'
 
 gem 'administrate', '0.4.0'
 
+gem 'dotenv-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

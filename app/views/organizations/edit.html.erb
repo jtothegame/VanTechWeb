@@ -1,5 +1,8 @@
 <div class="body-container">
   <div class="container">
+    <div>
+      <h3>Update organization</h3>
+    </div>
     <%= form_for @organization do |f| %>
 
       <%= f.label :name %><br>
@@ -23,28 +26,18 @@
       <%= f.label :twitter %><br>
       <%= f.text_field :twitter%>
 
-      <%= fields_for Tag.new do |tag| %>
-        <%= f.label 'Create New Technology' %><br>
-        <%= tag.text_field :name %>
-      <% end %>
-
       <%= f.label :Technology %><br>
       <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name,
                                       {},
                                       { multiple: true, class:'browser-default chosen-select'}%>
-
-
-      <br><br>
-      <%= f.check_box :published, { class: "filled-in" }, 'true', 'false' %>
-      <%= f.label :published%>
-      <br>
-
+      <br><br>                             
       <div class="right">
         <%= button_tag( :class => "btn") do %>
         Save Changes<i class="material-icons right">send</i>
         <% end %>
       </div>
-
     <% end %>
+    <br>
+
   </div>
 </div>
