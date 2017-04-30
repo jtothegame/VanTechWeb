@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
   resources :about, only: [:index]
 
+  resources :photos, only: [:create]
+
 
   root 'home#index'
 end
