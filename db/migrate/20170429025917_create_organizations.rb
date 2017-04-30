@@ -8,9 +8,7 @@ class CreateOrganizations < ActiveRecord::Migration[5.0]
       t.integer :teamsize
       t.string :website
       t.string :twitter
-      t.string :logo
       t.boolean :published, default: false
-      t.string :photos, array: true, default: []
 
       t.timestamps
     end

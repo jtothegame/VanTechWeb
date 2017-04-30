@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170430061915) do
+ActiveRecord::Schema.define(version: 20170430173733) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,22 @@ ActiveRecord::Schema.define(version: 20170430061915) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_events_on_name", using: :btree
+  end
+
+  create_table "headers", force: :cascade do |t|
+    t.string   "url"
+    t.integer  "organization_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["organization_id"], name: "index_headers_on_organization_id", using: :btree
+  end
+
+  create_table "icons", force: :cascade do |t|
+    t.string   "url"
+    t.integer  "organization_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["organization_id"], name: "index_icons_on_organization_id", using: :btree
   end
 
   create_table "managers", force: :cascade do |t|
@@ -57,13 +73,19 @@ ActiveRecord::Schema.define(version: 20170430061915) do
     t.integer  "teamsize"
     t.string   "website"
     t.string   "twitter"
-    t.string   "logo"
     t.boolean  "published",  default: false
-    t.string   "photos",     default: [],                 array: true
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.float    "lat"
     t.float    "long"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "url"
+    t.integer  "organization_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["organization_id"], name: "index_photos_on_organization_id", using: :btree
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -102,8 +124,11 @@ ActiveRecord::Schema.define(version: 20170430061915) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "headers", "organizations"
+  add_foreign_key "icons", "organizations"
   add_foreign_key "managers", "organizations"
   add_foreign_key "managers", "users"
+  add_foreign_key "photos", "organizations"
   add_foreign_key "taggings", "organizations"
   add_foreign_key "taggings", "tags"
 end

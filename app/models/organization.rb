@@ -1,6 +1,9 @@
 class Organization < ApplicationRecord
   has_one :manager
-  has_one :user, through: :managers
+  has_one :user, through: :manager
+  has_one :icon
+  has_one :header
+  has_many :photos
 
   has_many :tags, through: :taggings
   has_many :taggings
