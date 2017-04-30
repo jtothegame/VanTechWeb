@@ -8,8 +8,18 @@
 $(document).ready(function(){
 
  $('.parallax').parallax();
+ $('.chosen-select').chosen();
 
- $('.chosen-select').chosen()
+// modal config stuff
+ $('.modal').modal({
+     dismissible: true,
+     opacity: .2,
+     inDuration: 300,
+     outDuration: 200,
+     startingTop: '4%',
+     endingTop: '10%',
+   }
+ );
 
 // for user dropdown menu
  $('.dropdown-button').dropdown({

@@ -3,18 +3,11 @@
 
   <nav style="background-image: url(assets/geo_final.jpg); background-size: 100%">
 
-<!-- style="background-image: url(geo_final.jpg); background-size: 100% -->
-  <div>
-
 <!-- logo and brand -->
-<ul class="left">
-
-<li><a href="/" class=" left">
-  <%= image_tag("logo.png", class: "") %>
-    <!-- <img style=" margin-left: 50px; margin-top: 10px;" src="logo.png" alt=""> -->
-  </a></li>
-</ul>
-
+  <div class='nav-wrapper'>
+    <a href="/" class="brand-logo">
+      <%= image_tag("logo.png", class: "top-brand-logo") %>
+    </a>
 
 <!-- signed in ADMIN -->
 <% if user_signed_in? && current_user.admin? %>
