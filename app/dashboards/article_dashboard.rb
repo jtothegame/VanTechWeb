@@ -16,6 +16,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     url: Field::String,
     urlToImage: Field::String,
     publishedAt: Field::DateTime,
+    author: Field::String,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -41,6 +42,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     :url,
     :urlToImage,
     :publishedAt,
+    :author,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -52,6 +54,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     :url,
     :urlToImage,
     :publishedAt,
+    :author,
   ].freeze
 
   # Overwrite this method to customize how articles are displayed

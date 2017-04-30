@@ -10,6 +10,9 @@ class OrganizationDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     manager: Field::HasOne,
     user: Field::HasOne,
+    icon: Field::HasOne,
+    header: Field::HasOne,
+    photos: Field::HasMany,
     tags: Field::HasMany,
     taggings: Field::HasMany,
     id: Field::Number,
@@ -20,9 +23,7 @@ class OrganizationDashboard < Administrate::BaseDashboard
     teamsize: Field::Number,
     website: Field::String,
     twitter: Field::String,
-    logo: Field::String,
     published: Field::Boolean,
-    photos: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     lat: Field::Number.with_options(decimals: 2),
@@ -35,13 +36,9 @@ class OrganizationDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-
-    :manager,
-    :user,
-    :tags,
-    :taggings,
+    :id,
     :name,
-    :address,
+    :published,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -49,6 +46,9 @@ class OrganizationDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :manager,
     :user,
+    :icon,
+    :header,
+    :photos,
     :tags,
     :taggings,
     :id,
@@ -59,9 +59,7 @@ class OrganizationDashboard < Administrate::BaseDashboard
     :teamsize,
     :website,
     :twitter,
-    :logo,
     :published,
-    :photos,
     :created_at,
     :updated_at,
     :lat,
@@ -74,6 +72,9 @@ class OrganizationDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :manager,
     :user,
+    :icon,
+    :header,
+    :photos,
     :tags,
     :taggings,
     :name,
@@ -83,9 +84,7 @@ class OrganizationDashboard < Administrate::BaseDashboard
     :teamsize,
     :website,
     :twitter,
-    :logo,
     :published,
-    :photos,
     :lat,
     :long,
   ].freeze
