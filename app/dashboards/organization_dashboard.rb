@@ -38,7 +38,7 @@ class OrganizationDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :name,
-    :published
+    :published,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     resources :organizations
     resources :tags
     resources :taggings
+    resources :photos
+    resources :headers
+    resources :icons
 
     root to: "users#index"
   end
