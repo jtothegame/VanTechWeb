@@ -8,6 +8,10 @@ class OrganizationDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+    manager: Field::HasOne,
+    user: Field::HasOne,
+    tags: Field::HasMany,
+    taggings: Field::HasMany,
     id: Field::Number,
     name: Field::String,
     address: Field::String,
@@ -21,6 +25,8 @@ class OrganizationDashboard < Administrate::BaseDashboard
     photos: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    lat: Field::Number.with_options(decimals: 2),
+    long: Field::Number.with_options(decimals: 2),
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -29,15 +35,19 @@ class OrganizationDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :id,
-    :name,
-    :address,
-    :overview,
+    :manager,
+    :user,
+    :tags,
+    :taggings,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
+    :manager,
+    :user,
+    :tags,
+    :taggings,
     :id,
     :name,
     :address,
@@ -51,12 +61,18 @@ class OrganizationDashboard < Administrate::BaseDashboard
     :photos,
     :created_at,
     :updated_at,
+    :lat,
+    :long,
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :manager,
+    :user,
+    :tags,
+    :taggings,
     :name,
     :address,
     :overview,
@@ -67,6 +83,8 @@ class OrganizationDashboard < Administrate::BaseDashboard
     :logo,
     :published,
     :photos,
+    :lat,
+    :long,
   ].freeze
 
   # Overwrite this method to customize how organizations are displayed

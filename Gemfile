@@ -41,6 +41,11 @@ gem 'faker', github: 'stympy/faker'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
 
+gem 'httparty'
+
+gem 'geocoder'
+
+gem 'gmaps4rails'
 
 gem 'administrate', '0.4.0'
 

@@ -1,0 +1,2 @@
+class NewsSearchTermsController < ApplicationController
+end

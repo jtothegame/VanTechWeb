@@ -1,0 +1,2 @@
+class NewsSearchTerm < ApplicationRecord
+end
