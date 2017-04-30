@@ -11,6 +11,6 @@ class Organization < ApplicationRecord
 
   geocoded_by :address, latitude: :lat, longitude: :long
 
-  after_validation :geocode, if: ->(obj){ (obj.address.present? and obj.address_changed?) or (obj.address.present? and !obj.lat.present?) }
+  after_validation :geocode, if: ->(obj){ (obj.address.present? and obj.address_changed?) }
 
 end

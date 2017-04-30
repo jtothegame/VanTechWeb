@@ -754,9 +754,9 @@ organization_list = [
 
   organization_list.each do |name, address, overview, employees, teamsize,
     website,twitter,published, lat, long|
-    Organization.create(name: name, address: address, overview: overview,
+    Organization.new(name: name, address: address, overview: overview,
      employees: employees, teamsize: teamsize, website: website,
-     twitter: twitter, published: published, lat: lat, long: long)
+     twitter: twitter, published: published, lat: lat, long: long).save(validate: false)
   end
 
   ["PHP", "javaScript", "Ruby", "HTML", "Rails", "C#", "C++", "go", "Python",
