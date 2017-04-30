@@ -1,0 +1,2 @@
+class EventsSearchTerm < ApplicationRecord
+end
