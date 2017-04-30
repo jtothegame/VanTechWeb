@@ -1,29 +1,56 @@
 <div class="body-content">
 <div class="container">
-
-  <div class="">
-    <p>Title: <%= @organization.name %></p>
-    <p>Address: <%= @organization.address %></p>
-    <p>Overview: <%= @organization.overview %></p>
-    <p>Employees size: <%= @organization.employees %></p>
-    <p>Tech team size: <%= @organization.teamsize %></p>
-    <p>Webstie: <%= @organization.website %></p>
-    <p>twitter: <%= @organization.twitter %></p>
-    <span>Technology: </span>
-    <% @organization.tags.each do |t| %>
-    <div class="chip">
-      <%= t.name %>
-      <i class="close material-icons">close</i>
+  <div class="row">
+    <div class="col m4">
+      <img style="max-width: 250px; margin:5px;"src="http://www.logo-company.in/logo/best-logo-designer-company-356.jpg" alt="">
     </div>
-    <% end %>
-    <% if @organization.published === true %>
-    <p>Published</p>
-    <% else %>
-    <p>Not published</p>
+    <div class="col m8">
+      <table class="bordered">
+        <tr>
+          <td><strong>Title: </strong></td>
+          <td><%= @organization.name %></td>
+        </tr>
+        <tr>
+          <td><strong>Address: </strong></td>
+          <td><%= @organization.address %></td>
+        </tr>
+        <tr>
+          <td><strong>Overview: </strong></td>
+          <td><%= @organization.overview %></td>
+        </tr>
+        <tr>
+          <td><strong>Employees size:</strong></td>
+          <td><%= @organization.employees %></td>
+        </tr>
+        <tr>
+          <td><strong>Tech team size: </strong></td>
+          <td><%= @organization.teamsize %></td>
+        </tr>
+        <tr>
+          <td><strong>Webstie: </strong></td>
+          <td><%= @organization.website %></td>
+        </tr>
+        <tr>
+          <td><strong>Twitter: </strong></td>
+          <td><%= @organization.twitter %></td>
+        </tr>
+        <tr>
+          <td><strong>Technology:</strong></td>
+          <td>
+            <% @organization.tags.each do |t| %>
+            <div class="chip">
+              <%= t.name %>
+            </div>
+            <% end %>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row right">
+    <% if @organization.user == current_user %>
+      <%= link_to "Edit Organization", edit_organization_path(@organization), class: "btn"%>
     <% end %>
   </div>
-  <% if @organization.user == current_user %>
-    <%= link_to "Edit Organization", edit_organization_path(@organization), class: "btn"%>
-  <% end %>
 </div>
 </div>
