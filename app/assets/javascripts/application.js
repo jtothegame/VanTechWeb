@@ -1,9 +1,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require chosen-jquery
-//= require chosen-jquery
 //= require materialize
 //= require jquery.vide
+//= require underscore
+//= require gmaps/google
 //= require_tree .
 
 $(document).ready(function(){

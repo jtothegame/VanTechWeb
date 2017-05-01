@@ -7,6 +7,11 @@ Rails.application.routes.draw do
     resources :organizations
     resources :tags
     resources :taggings
+    resources :photos
+    resources :headers
+    resources :icons
+    resources :news_search_terms
+    resources :events_search_terms
 
     root to: "users#index"
   end
@@ -26,6 +31,8 @@ Rails.application.routes.draw do
   resources :tags, only: [:create]
 
   resources :about, only: [:index]
+
+  resources :photos, only: [:create]
 
 
   root 'home#index'

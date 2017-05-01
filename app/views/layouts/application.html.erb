@@ -12,21 +12,18 @@
 
   <body>
     <%= render 'layouts/navbar' %>
-    <%= render 'layouts/sidenav' %>
 
-<!-- add dialogues instead -->
   <div class="center">
     <% flash.each do |message_type, message| %>
       <%= javascript_tag "Materialize.toast('#{message}', 4000)" %>
     <% end %>
   </div>
 
-<main>
-
+  <main>
     <%= yield %>
   </main>
 
-    <%= render 'layouts/footer' %>
+  <%= render 'layouts/footer' %>
 
   </body>
 </html>

@@ -10,7 +10,6 @@ module Admin
     before_action :authenticate_admin
 
     def authenticate_admin
-      # TODO Add authentication logic here.
       redirect_to '/', alert: 'Not Authorized.' unless current_user && current_user.admin
     end
 

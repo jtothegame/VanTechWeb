@@ -45,7 +45,7 @@ class EventDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how events are displayed
   # across all pages of the admin dashboard.
   #
-  def display_resource(event)
-    event.name
-  end
+  # def display_resource(event)
+  #   "Event ##{event.id}"
+  # end
 end

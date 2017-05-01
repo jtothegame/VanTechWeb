@@ -51,6 +51,11 @@ gem 'administrate', '0.4.0'
 
 gem 'vider', github: 'wazery/vider'
 
+gem 'dotenv-rails'
+
+gem "simple_calendar", "~> 2.0"
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170430061915) do
+ActiveRecord::Schema.define(version: 20170430211717) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,20 @@ ActiveRecord::Schema.define(version: 20170430061915) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "date"
+    t.string   "venue"
+    t.float    "lat"
+    t.float    "long"
+    t.string   "group"
+    t.string   "address"
+    t.string   "url"
     t.index ["name"], name: "index_events_on_name", using: :btree
+  end
+
+  create_table "events_search_terms", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "managers", force: :cascade do |t|
@@ -64,6 +77,16 @@ ActiveRecord::Schema.define(version: 20170430061915) do
     t.datetime "updated_at",                 null: false
     t.float    "lat"
     t.float    "long"
+    t.string   "icon"
+    t.string   "header"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "url"
+    t.integer  "organization_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["organization_id"], name: "index_photos_on_organization_id", using: :btree
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -104,6 +127,7 @@ ActiveRecord::Schema.define(version: 20170430061915) do
 
   add_foreign_key "managers", "organizations"
   add_foreign_key "managers", "users"
+  add_foreign_key "photos", "organizations"
   add_foreign_key "taggings", "organizations"
   add_foreign_key "taggings", "tags"
 end
