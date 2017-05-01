@@ -29,8 +29,8 @@
 
   <div class="row">
       <div class="col m4">
-        <% if @organization.logo.present? %>
-        <%= image_tag (@organization.logo_url), style:"max-width: 250px; margin:25px 5px 5px 5px;"%><br><br>
+        <% if @organization.icon.present? %>
+        <%= image_tag (@organization.icon_url), style:"max-width: 250px; margin:25px 5px 5px 5px;"%><br><br>
         <% else %>
         <%= image_tag ("#{@organization.name}.png") %>
         <% end %>
