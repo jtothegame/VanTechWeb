@@ -607,7 +607,7 @@ headers = %w(header2.png header3.png header4.png header5.png header6.png header7
 
 organization_list.each do |name, address, overview, employees, teamsize,
   website,twitter,published, lat, long|
-  header = "/assets/#{headers.sample(1)}"
+  header = "/assets/#{headers.sample(1)[0]}"
 
   # name: 'Andromeda', remote_photo_url: 'http://apod.nasa.gov/apod/image/1407/m31_bers_960.jpg', address: 'next to the Milky Way')
   Organization.new(name: name, address: address, overview: overview,
