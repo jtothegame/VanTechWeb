@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
 
       articles['articles'].each do |article|
         article = Article.new article
-        puts 'woo' if article.save!
+        puts 'woo' if article.save
       end
     end
 
