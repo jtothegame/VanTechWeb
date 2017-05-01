@@ -5,6 +5,11 @@
   <h1><%= "giving you #{@articles.length} articles" %></h1>
 
   <h1>News List</h1>
+
+  <div>
+    <%= paginate @articles %> <br><br>
+  </div>
+
   <ul id = "article-block">
   <% 5.times do %>
   <li>
@@ -24,6 +29,8 @@
 
   <% end %>
 </ul>
-
+<div>
+  <%= paginate @articles %> <br><br>
+</div>
 </div>
 </div>

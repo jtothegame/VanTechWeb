@@ -5,17 +5,24 @@
     <h1>Organization directory</h1>
 
 
+  <div class="row">
+    <div >
+      <%= paginate @organizations %> <br><br>
+    </div>
+
+
     <div class="row">
-      <% @organizations.first(20).each do |o| %>
+      <% @organizations.each do |o| %>
+
 
       <div class="col s12 m6">
         <a href="/organizations/<%= o.id %>">
         <div class="card horizontal hoverable">
           <div class="card-image" id='staggered'>
 
-            <!--<img class='brand-index-logo' src="https://sevennightsofstardust.files.wordpress.com/2014/09/logo-mang-jepun-copy-mata-f.png">-->
+
             <%= image_tag o.icon_url , class: 'brand-index-logo'%>
-<!-- need to erb img_path here -->
+
           </div>
           <div class="card-stacked">
             <div class="card-content">
@@ -33,31 +40,10 @@
       <% end %>
     </div>
 
+    <div >
+      <%= paginate @organizations %> <br><br>
+    </div>
 
-
-<!--  -->
   </div>
 </div>
-
-
-
-<!-- organization_list.each do |name, address, overview, employees, teamsize,
-  website,twitter,published, lat, long|
-  Organization.new(name: name, address: address, overview: overview,
-                   employees: employees, teamsize: teamsize, website: website,
-                   twitter: twitter, published: published, lat: lat, long: long)
-              .save(validate: false)
-end
-
-["PHP", "javaScript", "Ruby", "HTML", "Rails", "C#", "C++", "go", "Python",
-  "Css", "React.js", "Angular", "AJAX", "Node.js", "Express.js", "MySql",
-  "Docker", "Bootstrap", "CoffeeSript", "Pug", "Perl", "Postgres", "Less",
-  "Sass", "MangoDB", "Git", "Ember", "Django", "Swift", "Elixir"].each do |t|
-  Tag.create(name: t)
-end
-
-Organization.all.each do |org|
-  Tag.all.sample(3).each do |tag|
-    Tagging.create(tag: tag, organization: org)
-  end
-end -->
+</div>

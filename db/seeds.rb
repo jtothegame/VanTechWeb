@@ -28,16 +28,18 @@ end
 puts "Users created!"
 
 User.new(name: "Nic",
-            email: "nic@gmail.com",
-            password: "qweqwe",
-            password_confirmation: "qweqwe").save(validate: false)
+         icon: Rails.root.join("app/assets/images/kirkk.jpg").open,
+         email: "nic@gmail.com",
+         password: "qweqwe",
+         password_confirmation: "qweqwe").save(validate: false)
 puts "User Nic created!"
 
 User.new(name: "Admin",
-            email: 'admin@gmail.com',
-            password: 'qweqwe',
-            password_confirmation: 'qweqwe',
-            admin: true).save(validate: false)
+         icon: Rails.root.join("app/assets/images/kirkk.jpg").open,
+         email: 'admin@gmail.com',
+         password: 'qweqwe',
+         password_confirmation: 'qweqwe',
+         admin: true).save(validate: false)
 puts "Admin created!"
 
 

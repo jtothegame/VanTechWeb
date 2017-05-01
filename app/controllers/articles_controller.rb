@@ -12,7 +12,8 @@ class ArticlesController < ApplicationController
       api = NewsApi.new
       articles = api.articles(term.name)
 
-      # puts articles['articles']
+      puts articles
+      puts articles['articles']
 
       articles['articles'].each do |article|
         article = Article.new article
@@ -20,6 +21,7 @@ class ArticlesController < ApplicationController
       end
     end
 
-    @articles = Article.all
+    @articles = Article.all.page params[:page]
+    
   end
 end
