@@ -1,18 +1,22 @@
 <div class="body-content">
 <div class="container">
 
-  <h1><%= "giving you #{@events.length} events" %></h1>
-
   <div class="card">
       <div class="card-content">
         <h3>EVENTS LIST</h3>
              </div>
       <div class="card-content">
-        <%= month_calendar do |date| %>
-          <%= date.strftime("%d") %>
-          <div class="">
-            <a href="#">events here</a>
+        <%= month_calendar events: @events.each do |date, evs| %>
+          <%= date %>
+            <% evs.each do |event| %>
+
+            <a class='tooltipped' data-position="bottom" data-delay="50"
+               data-tooltip="<h5><%= event.name %></h5><br>
+                             <h6>Organized by: <%= event.group %></h6><br>
+                             <h6>Hosted at: <%= event.venue %></h6><br>
+                             <h6><%= event.address %></h6>" href="<%= event.url %>"><%= event.name %></a>
           </div>
+            <% end %>
         <% end %>
       </div>
 
@@ -21,3 +25,13 @@
 
 </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $('.tooltipped').each(function(index, element) {
+            var span = $('#' + $(element).attr('data-tooltip-id') + '>span:first-child');
+            span.before($(element).attr('data-tooltip'));
+            span.remove();
+        });
+    });
+</script>
