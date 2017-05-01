@@ -1,3 +1,20 @@
+<script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+        t._e.push(f);
+    };
+
+    return t;
+}(document, "script", "twitter-wjs"));</script>
+
 <div class="body-content">
   <div style="height: 100%;" class="parallax-container">
     <div style="position:relative;" class="parallax">
@@ -42,7 +59,12 @@
           </tr>
           <tr>
             <td><strong>Twitter: </strong></td>
-            <td><%= @organization.twitter %></td>
+            <td><a class="twitter-timeline"
+               href='<%= @organization.twitter %>'
+               data-width="450"
+               data-height="400"
+               data-chrome="nofooter noborders">
+            </a></td>
           </tr>
           <tr>
             <td><strong>Technology:</strong></td>
@@ -66,9 +88,9 @@
     <div class="col m4">
 
     </div>
-  <div class="col m8">
-    <div style='width: 800px;'>
-      <div id="map" style='width: 80%; height: 400px;'></div>
+    <div class="col m8">
+      <div style='width: 800px;'>
+        <div id="map" style='width: 80%; height: 400px;'></div>
       </div>
     </div>
   </div>
@@ -88,12 +110,13 @@
                   "width":  32,
                   "height": 32
               },
-              "infowindow": "hello!"
+              "infowindow": <%= "#{@organization.name}"%>
           }
         ]);
         handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
     });
+
   </script>
 
   </div>
