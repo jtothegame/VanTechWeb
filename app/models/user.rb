@@ -1,5 +1,6 @@
 class User < ApplicationRecord
 
+
   mount_uploader :icon
 
   has_one :manager
