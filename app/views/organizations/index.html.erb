@@ -1,7 +1,9 @@
 <div class="body-content">
   <div class="container">
 
-    <%= link_to "Add a New Organization", (new_organization_path), class: 'btn right disabled' %>
+    <% if user_signed_in? && (current_user.admin? || current_user.organization == nil) %>
+    <%= link_to "Add a New Organization", (new_organization_path), class: 'btn right' %>
+    <% end %>
     <h1>Organization directory</h1>
 
 

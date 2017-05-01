@@ -18,7 +18,7 @@
 <div class="body-content">
 
   <div class="header-container">
-    <%= image_tag (@organization.header) %>
+    <%= image_tag (@header) %>
     <div class="header-title">
       <h1 class='ht'><%= @organization.name %></h1>
     </div>
@@ -88,7 +88,8 @@
       </div>
     </div>
   <div class="row right">
-    <% if @organization.user %>
+
+    <% if user_signed_in? && (@organization.user == current_user || current_user.admin?)%>
       <%= link_to "Edit Organization", edit_organization_path(@organization), class: "btn"%>
     <% end %>
   </div>
