@@ -5,10 +5,7 @@
 
   <div class="row">
       <div class="col m4">
-
-        <p>Icon : </p><%= image_tag (@organization.icon_url), style:"max-width: 250px; margin:25px 5px 5px 5px;"%><br><br>
-        <p>Header: </p><%= image_tag (@organization.header_url), style:"max-width: 250px; margin:25px 5px 5px 5px;"%>
-
+        <%= image_tag (@organization.icon_url), style:"max-width: 250px; margin:25px 5px 5px 5px;"%><br><br>
       </div>
       <div class="col m8">
         <table class="bordered">
@@ -43,10 +40,6 @@
           <tr>
             <td><strong>Icon: </strong></td>
             <td><%= @organization.icon %></td>
-          </tr>
-          <tr>
-            <td><strong>Header: </strong></td>
-            <td><%= @organization.header %></td>
           </tr>
           <tr>
             <td><strong>Technology:</strong></td>

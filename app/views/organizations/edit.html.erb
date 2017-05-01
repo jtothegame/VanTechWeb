@@ -27,10 +27,7 @@
       <%= f.text_field :twitter%>
 
       <%= f.label :icon %><br>
-      <%= f.file_field :icon%><br>
-
-      <%= f.label :header %><br>
-      <%= f.file_field :header%><br><br>
+      <%= f.file_field :icon%><br><br>
 
       <%= f.label :Technology %><br>
       <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name,
