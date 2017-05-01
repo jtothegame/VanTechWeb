@@ -18,28 +18,28 @@
 #   t.string :photos, array: true, default: []
 
 40.times do
-  User.create(name: Faker::Name.first_name,
-              icon: "kirkk.jpg",
+  User.new(name: Faker::Name.first_name,
+              icon: Rails.root.join("app/assets/images/kirkk.jpg").open,
               email: Faker::Internet.email,
               password: "12345678",
               password_confirmation: "12345678"
-  )
+  ).save(validate: false)
 end
 puts "Users created!"
 
-User.create(name: "Nic",
-            icon: "kirkk.jpg",
+User.new(name: "Nic",
+            icon: Rails.root.join("app/assets/images/kirkk.jpg").open,
             email: "nic@gmail.com",
             password: "qweqwe",
-            password_confirmation: "qweqwe")
+            password_confirmation: "qweqwe").save(validate: false)
 puts "User Nic created!"
 
-User.create(name: "Admin",
-            icon: "kirkk.jpg",
+User.new(name: "Admin",
+            icon: Rails.root.join("app/assets/images/kirkk.jpg").open,
             email: 'admin@gmail.com',
             password: 'qweqwe',
             password_confirmation: 'qweqwe',
-            admin: true)
+            admin: true).save(validate: false)
 puts "Admin created!"
 
 
@@ -603,11 +603,17 @@ organization_list =
     "https://twitter.com/SpaceList",
     true, 48.42446169999999, -123.3685469]]
 
+headers = %w(header2.png header3.png header4.png header5.png header6.png header7.png header8.png header9.png header10.png)
+
 organization_list.each do |name, address, overview, employees, teamsize,
   website,twitter,published, lat, long|
+  header = "/assets/#{headers.sample(1)}"
+
+  # name: 'Andromeda', remote_photo_url: 'http://apod.nasa.gov/apod/image/1407/m31_bers_960.jpg', address: 'next to the Milky Way')
   Organization.new(name: name, address: address, overview: overview,
                    employees: employees, teamsize: teamsize, website: website,
-                   twitter: twitter, published: published, lat: lat, long: long)
+                   twitter: twitter, published: published, lat: lat, long: long,
+                   header: header, icon: Rails.root.join("app/assets/images/#{name}.png").open)
               .save(validate: false)
 end
 

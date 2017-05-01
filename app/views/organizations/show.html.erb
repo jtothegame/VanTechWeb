@@ -19,7 +19,8 @@
   <div style="height: 100%;" class="parallax-container">
     <div style="position:relative;" class="parallax">
       <h1 style="z-index:1; color:white; margin-left: 20px;"><%= @organization.name %></h1>
-      <img style="z-index:-1;" src="/assets/header2.png">
+      <!--<img style="z-index:-1;" src="/assets/header2.png">-->
+      <%= image_tag (@organization.header) %>
     </div>
   </div>
 <div class="container">

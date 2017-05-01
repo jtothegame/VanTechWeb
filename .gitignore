@@ -19,3 +19,4 @@
 .env
 
 # this is a comment
+/public/uploads/
