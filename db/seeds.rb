@@ -134,13 +134,6 @@ organization_list = [
       and discover what matters most.",54, 25,"https://thoughtexchange.com//",
       "https://twitter.com/thoughtexchnge",true, 49.2848948, -123.1105267
     ],
-    ["Talametry","200-13799 Commerce Parkway, Richmond, V6V 2N9",
-      "Talemetry® works with your applicant tracking system enabling you to reach
-      candidates quickly using all recruitment marketing and sourcing channels
-      and activities on a single powerful technology platform. Improve candidate
-      experiences, optimize recruiter efficiency, control costs, and measure what works.",55,30,"http://www.talemetry.com","https://twitter.com/talemetry",true,
-      49.17669129999999, -123.0699633
-    ],
     ["Colligo","400-1152 Mainland St., Vancouver, V6B 4X3","Colligo is the #1
       provider of SharePoint/Office 365 solutions for mobility, email management
       and collaboration.. The company’s flagship software, Colligo Engage,
@@ -530,7 +523,7 @@ organization_list = [
                 close more deals, and find new ways to delight customers", 34, 8,
           "www.edvisor.io", "https://twitter.com/edvisorio", true, 49.2839878,
           -123.1053755],
-            ["Moijio", "1080 Howe St, Vancouver, BC V6Z", "When people ask us,
+            ["Mojio", "1080 Howe St, Vancouver, BC V6Z", "When people ask us,
               “What does Mojio mean?” we usually start by explaining that it
               didn’t mean much of anything when the founders chose the name in
               2012. That was the whole point. An automotive revolution was brewing

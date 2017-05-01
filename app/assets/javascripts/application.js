@@ -3,6 +3,7 @@
 //= require chosen-jquery
 //= require chosen-jquery
 //= require materialize
+//= require jquery.vide
 //= require_tree .
 
 $(document).ready(function(){

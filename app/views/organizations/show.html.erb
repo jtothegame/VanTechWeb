@@ -10,6 +10,9 @@
   <p>Tech team size: <%= @organization.teamsize %></p>
   <p>Webstie: <%= @organization.website %></p>
   <p>twitter: <%= @organization.twitter %></p>
+  <div>
+  <p> <%=  image_tag("logos/#{@organization.name}.png")%></p>
+</div>
   <span>Technology: </span>
   <% @organization.tags.each do |t| %>
   <span><%= t.name %>|</span>

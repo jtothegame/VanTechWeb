@@ -49,6 +49,8 @@ gem 'gmaps4rails'
 
 gem 'administrate', '0.4.0'
 
+gem 'vider', github: 'wazery/vider'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
