@@ -13,23 +13,11 @@
   <body>
     <%= render 'layouts/navbar' %>
 
-<<<<<<< HEAD
-<!-- add dialogues instead -->
-<div class="right">
-
-<% flash.each do |message_type, message| %>
-    <%= javascript_tag "Materialize.toast('#{message}', 4000)" %>
-<% end %>
-</div>
-
-
-=======
   <div class="center">
     <% flash.each do |message_type, message| %>
       <%= javascript_tag "Materialize.toast('#{message}', 4000)" %>
     <% end %>
   </div>
->>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
 
   <main>
     <%= yield %>

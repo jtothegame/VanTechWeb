@@ -1,10 +1,5 @@
 class Organization < ApplicationRecord
   has_one :manager
-<<<<<<< HEAD
-  has_one :user, through: :managers
-  has_many :tags, through: :taggings
-  has_many :taggings
-=======
   has_one :user, through: :manager
   has_many :photos
 
@@ -18,5 +13,4 @@ class Organization < ApplicationRecord
 
   after_validation :geocode, if: ->(obj){ (obj.address.present? and obj.address_changed?) }
 
->>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
 end

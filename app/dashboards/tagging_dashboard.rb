@@ -48,13 +48,7 @@ class TaggingDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how taggings are displayed
   # across all pages of the admin dashboard.
   #
-<<<<<<< HEAD
-  # def display_resource(tagging)
-  #   "Tagging ##{tagging.id}"
-  # end
-=======
   def display_resource(tagging)
     "#{tagging.tag.name} - #{tagging.organization.name}"
   end
->>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
 end

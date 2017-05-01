@@ -8,14 +8,11 @@ class OrganizationDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-<<<<<<< HEAD
-=======
     manager: Field::HasOne,
     user: Field::HasOne,
     photos: Field::HasMany,
     tags: Field::HasMany,
     taggings: Field::HasMany,
->>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
     id: Field::Number,
     name: Field::String,
     address: Field::String,
@@ -24,13 +21,6 @@ class OrganizationDashboard < Administrate::BaseDashboard
     teamsize: Field::Number,
     website: Field::String,
     twitter: Field::String,
-<<<<<<< HEAD
-    logo: Field::String,
-    published: Field::Boolean,
-    photos: Field::String,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
-=======
     published: Field::Boolean,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -38,7 +28,6 @@ class OrganizationDashboard < Administrate::BaseDashboard
     long: Field::Number.with_options(decimals: 2),
     icon: Field::String,
     header: Field::String,
->>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -49,25 +38,17 @@ class OrganizationDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :name,
-<<<<<<< HEAD
-    :address,
-    :overview,
-=======
     :published,
->>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-<<<<<<< HEAD
-=======
     :manager,
     :user,
     :photos,
     :tags,
     :taggings,
->>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
     :id,
     :name,
     :address,
@@ -76,13 +57,6 @@ class OrganizationDashboard < Administrate::BaseDashboard
     :teamsize,
     :website,
     :twitter,
-<<<<<<< HEAD
-    :logo,
-    :published,
-    :photos,
-    :created_at,
-    :updated_at,
-=======
     :published,
     :created_at,
     :updated_at,
@@ -90,7 +64,6 @@ class OrganizationDashboard < Administrate::BaseDashboard
     :long,
     :icon,
     :header,
->>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -104,11 +77,6 @@ class OrganizationDashboard < Administrate::BaseDashboard
     :teamsize,
     :website,
     :twitter,
-<<<<<<< HEAD
-    :logo,
-    :published,
-    :photos,
-=======
     :published,
     :lat,
     :long,
@@ -119,19 +87,12 @@ class OrganizationDashboard < Administrate::BaseDashboard
     :photos,
     :tags,
     :taggings,
->>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
   ].freeze
 
   # Overwrite this method to customize how organizations are displayed
   # across all pages of the admin dashboard.
   #
-<<<<<<< HEAD
-  # def display_resource(organization)
-  #   "Organization ##{organization.id}"
-  # end
-=======
   def display_resource(organization)
     organization.name
   end
->>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
 end

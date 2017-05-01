@@ -16,9 +16,6 @@
 # Ignore Byebug command history file.
 .byebug_history
 .idea/
-<<<<<<< HEAD
-=======
 .env
->>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
 
 # this is a comment
