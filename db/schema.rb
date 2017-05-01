@@ -70,9 +70,7 @@ ActiveRecord::Schema.define(version: 20170430211717) do
     t.integer  "teamsize"
     t.string   "website"
     t.string   "twitter"
-    t.string   "logo"
     t.boolean  "published",  default: false
-    t.string   "photos",     default: [],                 array: true
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.float    "lat"
