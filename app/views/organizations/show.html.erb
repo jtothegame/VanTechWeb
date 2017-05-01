@@ -1,4 +1,27 @@
+<script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+        t._e.push(f);
+    };
+
+    return t;
+}(document, "script", "twitter-wjs"));</script>
+
 <div class="body-content">
+  <div style="height: 100%;" class="parallax-container">
+    <div style="position:relative;" class="parallax">
+      <h1 style="z-index:1; color:white; margin-left: 20px;"><%= @organization.name %></h1>
+      <img style="z-index:-1;" src="/assets/header2.png">
+    </div>
+  </div>
 <div class="container">
 
   <div class="">
@@ -30,12 +53,17 @@
             <td><%= @organization.teamsize %></td>
           </tr>
           <tr>
-            <td><strong>Webstie: </strong></td>
+            <td><strong>Website: </strong></td>
             <td><%= @organization.website %></td>
           </tr>
           <tr>
             <td><strong>Twitter: </strong></td>
-            <td><%= @organization.twitter %></td>
+            <td><a class="twitter-timeline"
+               href='<%= @organization.twitter %>'
+               data-width="450"
+               data-height="400"
+               data-chrome="nofooter noborders">
+            </a></td>
           </tr>
           <tr>
             <td><strong>Icon: </strong></td>
@@ -59,10 +87,17 @@
       <%= link_to "Edit Organization", edit_organization_path(@organization), class: "btn"%>
     <% end %>
   </div>
+  <div class="row">
+    <div class="col m4">
 
-  <div style='width: 800px;'>
-    <div id="map" style='width: 800px; height: 400px;'></div>
+    </div>
+    <div class="col m8">
+      <div style='width: 800px;'>
+        <div id="map" style='width: 80%; height: 400px;'></div>
+      </div>
+    </div>
   </div>
+
 
   <script src="//maps.google.com/maps/api/js?key=<%=ENV['GOOGLE_MAPS_API_KEY'] %>"></script>
   <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
@@ -73,17 +108,13 @@
           {
               "lat": <%= @organization.lat %>,
               "lng": <%= @organization.long %>,
-              "picture": {
-                  "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
-                  "width":  32,
-                  "height": 32
-              },
-              "infowindow": "hello!"
+              "infowindow": "<%= "#{@organization.name}"%>"
           }
         ]);
         handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
     });
+
   </script>
 
   </div>

@@ -1,20 +1,28 @@
 <div class="body-content">
 <div class="container">
 
-  <h1>News articles list</h1>
-  <div class="row">
-    <div class="col m6">
-      <img src="http://realislaam.com/wp-content/uploads/2016/06/technology.jpg" alt="">
+  <h1>News List</h1>
+  <ul id = "article-block">
+  <% 5.times do %>
+  <li>
+    <div class="row ">
+      <div class="col m4">
+        <img style="width: 100%;margin: 14px 0px;" src="http://realislaam.com/wp-content/uploads/2016/06/technology.jpg" alt="">
+      </div>
+      <div class="col m8">
+        <p><a href="#">News title</a><p>
+        <span>May 3, 2016</span>
+        <span>Source: <a href="#">Vancity Buzz</a></span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <hr class="style-hr">
+
     </div>
-    <div class="col m6">
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </li>
 
 
 
-    </div>
-
-  </div>
-
+  <% end %>
+</ul>
 </div>
 </div>

@@ -1,69 +1,86 @@
-<!-- profile should route to user#show page -->
-<!-- settings should route to user#edit page -->
+<header>
+  <nav style="background-image: url(assets/geo_final.jpg); background-size: 100%" class='top-nav'>
 
-  <nav style="background-image: url(assets/geo_final.jpg); background-size: 100%">
-
-<!-- logo and brand -->
-  <div class='nav-wrapper'>
     <a href="/" class="brand-logo">
       <%= image_tag("logo.png", class: "top-brand-logo") %>
     </a>
 
-<!-- signed in ADMIN -->
-<% if user_signed_in? && current_user.admin? %>
-  <ul class="right">
-    <li><a>Hello <%= "#{current_user.name}" %></a></li>
+    <div class="nav-wrapper"><% if user_signed_in? && current_user.admin? %>
+      <ul class="right">
+        <li>Hello <%= "#{current_user.name}" %>!</li>
+        <%= image_tag (current_user.icon_url), class:'dropdown-button small-dp'%>
 
-    <li><a>
-<!-- need to implement if user has icon, use their icon -->
-<!-- else use this default one -->
-      <%# if current_user.icon? %>
-      <%#= current_user.icon %>
-      <%# else %>
-      <img  class='dropdown-button small-dp' href='#' data-activates='dropdown1' src="assets/admin.jpg" alt=""></a></li>
-  </ul>
+        <li class=''><a class=''>
+      <!-- need to implement if user has icon, use their icon -->
+      <!-- else use this default one -->
+            <%# if current_user.icon? %>
+            <%#= current_user.icon %>
+            <%# else %>
+            <img class='dropdown-button small-dp circle' href='#' data-activates='dropdown1' src="assets/admin.jpg" alt=""></a></li>
+        </ul>
 
-<!-- signed in USER -->
-  <% elsif user_signed_in? %>
-  <ul class="right">
-    <ul class="right">
-      <li><a>Hello <%= "#{current_user.name}" %></a></li>
-      <li><a><%= image_tag (current_user.icon_url), class:'dropdown-button small-dp'%></a>
+        <!-- signed in USER -->
+          <% elsif user_signed_in? %>
+          <ul class="right">
+            <ul class="right">
+              <li><a>Hello <%= "#{current_user.name}" %></a></li>
+              <li><a><img  class='dropdown-button small-dp' href='#' data-activates='dropdown1' src="assets/user_placeholder.jpg" alt=""></a></li>
+            </ul>
+          </ul>
+
+          <!-- not signed in -->
+          <% else %>
+          <ul class="right">
+            <li style="padding-right:5px;">Welcome friend! </li>
+            <li><%= link_to 'Sign Up', new_user_registration_path %> </li>
+            <li><%= link_to 'Login', new_user_session_path %> </li>
+          </ul>
+          <% end %>
+
+          </div>
+        </nav>
+
+        <!-- IF SIGNED IN dropdown profile menu, leave where it is -->
+        <!-- add icons, fix alignment later -->
+        <!-- should switch to erb tags after -->
+        <ul id="dropdown1" class="dropdown-content">
+          <% if user_signed_in? && current_user.admin? %>
+          <li><%= link_to 'Admin Dashboard', admin_root_path %> </li>
+          <li><a href="#!">Settings</a></li>
+          <li class="divider"></li>
+          <li class="waves-effect waves-light">
+            <%= link_to 'Logout', destroy_user_session_path,
+                method: :delete, data: {confirm: 'Logout?'} %>
+          </li>
+
+          <% else %>
+          <li><a href="#!">Profile</a></li>
+          <li><a href="#!">Settings</a></li>
+          <li class="divider"></li>
+          <li class="waves-effect waves-light">
+            <%= link_to 'Logout', destroy_user_session_path,
+                method: :delete, data: {confirm: 'Logout?'} %>
+          </li>
+          <% end %>
+        </ul>
+
+
+<!-- sidenav  -->
+    <ul class="side-nav fixed show-on-small">
+    <!-- <ul id="side-nav-list" class="side-nav fixed"> -->
+      <li><%= link_to '<i class="material-icons">home</i>'.html_safe, root_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Home'} %></li>
+
+    <!-- probably get rid of dashboard -->
+      <li><%= link_to '<i class="material-icons">explore</i>'.html_safe, organizations_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Explore (disabled)'} %></li>
+
+      <li><%= link_to '<i class="material-icons">event</i>'.html_safe, events_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Events'} %></li>
+
+      <li><%= link_to '<i class="material-icons">business</i>'.html_safe, organizations_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Organizations directory'} %></li>
+
+      <li><%= link_to '<i class="material-icons">library_books</i>'.html_safe, articles_path, class: 'tooltipped', data: { position: 'right', tooltip: 'Articles'} %></li>
+
+      <li><%= link_to '<i class="material-icons">tag_faces</i>'.html_safe, about_index_path, class: 'tooltipped', data: { position: 'right', tooltip: 'About us'} %></li>
     </ul>
-  </ul>
 
-  <!-- not signed in -->
-  <% else %>
-  <ul class="right">
-    <li style="padding-right:5px;">Welcome friend! </li>
-    <li><%= link_to 'Sign Up', new_user_registration_path %> </li>
-    <li><%= link_to 'Login', new_user_session_path %> </li>
-  </ul>
-  <% end %>
-
-  </div>
-</nav>
-
-<!-- IF SIGNED IN dropdown profile menu, leave where it is -->
-<!-- add icons, fix alignment later -->
-<!-- should switch to erb tags after -->
-<ul id="dropdown1" class="dropdown-content">
-  <% if user_signed_in? && current_user.admin? %>
-  <li><%= link_to 'Admin Dashboard', admin_root_path %> </li>
-  <li><a href="#!">Settings</a></li>
-  <li class="divider"></li>
-  <li class="waves-effect waves-light">
-    <%= link_to 'Logout', destroy_user_session_path,
-        method: :delete, data: {confirm: 'Logout?'} %>
-  </li>
-
-  <% else %>
-  <li><a href="#!">Profile</a></li>
-  <li><a href="#!">Settings</a></li>
-  <li class="divider"></li>
-  <li class="waves-effect waves-light">
-    <%= link_to 'Logout', destroy_user_session_path,
-        method: :delete, data: {confirm: 'Logout?'} %>
-  </li>
-  <% end %>
-</ul>
+  </nav>
+</header>
