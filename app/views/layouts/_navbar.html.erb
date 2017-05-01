@@ -10,7 +10,7 @@
     <div class="nav-wrapper"><% if user_signed_in? && current_user.admin? %>
       <ul class="right">
         <li>Hello <%= "#{current_user.name}" %>!</li>
-        <%= image_tag (current_user.icon_url), class:'dropdown-button small-dp'%>
+        <%= image_tag (current_user.icon), class:'dropdown-button small-dp'%>
 
         <li class=''><a class=''>
       <!-- need to implement if user has icon, use their icon -->

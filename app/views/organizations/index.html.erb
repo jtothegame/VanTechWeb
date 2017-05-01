@@ -6,27 +6,29 @@
 
 <!--  -->
     <div class="row">
-      <%= @organizations.each do |o| %>
+      <% @organizations.first(20).each do |o| %>
 
       <div class="col s12 m6">
+        <a href="/organizations/<%= o.id %>">
         <div class="card horizontal hoverable">
           <div class="card-image" id='staggered'>
-            <img class='circle' src="https://sevennightsofstardust.files.wordpress.com/2014/09/logo-mang-jepun-copy-mata-f.png">
+
+            <img class='brand-index-logo' src="https://sevennightsofstardust.files.wordpress.com/2014/09/logo-mang-jepun-copy-mata-f.png">
+<!-- need to erb img_path here -->
           </div>
           <div class="card-stacked">
             <div class="card-content">
               <div class="ellipsis">
-              <h4><%= o.name %></h4>
-              <p class='trunc'><%= o.overview %></p>
+                <h5><%= o.name %></h5>
+                <p class='trunc'><%= o.overview %></p>
+              </div>
             </div>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
+
           </div>
         </div>
-      </div>
 
+        </a>
+      </div>
       <% end %>
     </div>
 
