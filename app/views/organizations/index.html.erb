@@ -1,10 +1,10 @@
 <div class="body-content">
   <div class="container">
 
+    <%= link_to "Add a New Organization", (new_organization_path), class: 'btn right disabled' %>
     <h1>Organization directory</h1>
-    
 
-<!--  -->
+
     <div class="row">
       <% @organizations.first(20).each do |o| %>
 
