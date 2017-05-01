@@ -4,15 +4,9 @@
     <%= link_to "Add a New Organization", (new_organization_path), class: 'btn right disabled' %>
     <h1>Organization directory</h1>
 
-<!--  -->
-<div class=''>
-  <%= will_paginate @organizations %>
-  <br>
-</div>
 
-  <div class="row">
-
-      <% @organizations.each do |o| %>
+    <div class="row">
+      <% @organizations.first(20).each do |o| %>
 
       <div class="col s12 m6">
         <a href="/organizations/<%= o.id %>">
@@ -39,9 +33,7 @@
       <% end %>
     </div>
 
-    <div >
-      <%= will_paginate @organizations %> <br><br>
-    </div>
+
 
 <!--  -->
   </div>
