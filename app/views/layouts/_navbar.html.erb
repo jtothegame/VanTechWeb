@@ -26,7 +26,7 @@
           <ul class="right">
             <ul class="right">
               <li><a>Hello <%= "#{current_user.name}" %></a></li>
-              <li><a><img  class='dropdown-button small-dp' href='#' data-activates='dropdown1' src="assets/user_placeholder.jpg" alt=""></a></li>
+              <li><a><%= image_tag (current_user.icon_url), class: 'dropdown-button small-dp', data: {activates: 'dropdown1'}%></a></li>
             </ul>
           </ul>
 
