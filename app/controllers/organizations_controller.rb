@@ -1,5 +1,5 @@
 class OrganizationsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :find_organization, only:[:show, :edit, :update]
 
 
@@ -26,11 +26,17 @@ class OrganizationsController < ApplicationController
   end
 
   def edit
+    if !(@organization.user == current_user || current_user.admin?)
+      redirect_to organization_path(@organization)
+    end
+
   end
 
   def update
-    if @organization.update(organization_params) && @organization.user == current_user
+    if !(@organization.user == current_user || current_user.admin?)
+      redirect_to organization_path(@organization)
 
+    elsif @organization.update(organization_params)
       redirect_to organization_path(@organization)
     else
       render :edit

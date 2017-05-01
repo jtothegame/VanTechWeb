@@ -88,7 +88,7 @@
       </div>
     </div>
   <div class="row right">
-    <% if @organization.user == current_user %>
+    <% if user_signed_in? && (@organization.user == current_user || current_user.admin?)%>
       <%= link_to "Edit Organization", edit_organization_path(@organization), class: "btn"%>
     <% end %>
   </div>
