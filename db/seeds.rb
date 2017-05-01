@@ -32,9 +32,7 @@ User.create(name: "Nic",
             email: "nic@gmail.com",
             password: "qweqwe",
             password_confirmation: "qweqwe")
-
-
-puts "Nic created!"
+puts "User Nic created!"
 
 User.create(name: "Admin",
             icon: "kirkk.jpg",

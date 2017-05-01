@@ -1,8 +1,60 @@
 <div class="body-content">
-<div class="container">
+  <div class="container">
 
-  <h1>Organization list</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h1>Organization directory</h1>
+    <p>Here you go buddyy</p>
 
+<!--  -->
+    <div class="row">
+      <%= @organizations.each do |o| %>
+
+      <div class="col s12 m6">
+        <div class="card horizontal hoverable">
+          <div class="card-image" id='staggered'>
+            <img class='circle' src="https://sevennightsofstardust.files.wordpress.com/2014/09/logo-mang-jepun-copy-mata-f.png">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <div class="ellipsis">
+              <h4><%= o.name %></h4>
+              <p class='trunc'><%= o.overview %></p>
+            </div>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <% end %>
+    </div>
+
+
+
+<!--  -->
+  </div>
 </div>
-</div>
+
+
+
+<!-- organization_list.each do |name, address, overview, employees, teamsize,
+  website,twitter,published, lat, long|
+  Organization.new(name: name, address: address, overview: overview,
+                   employees: employees, teamsize: teamsize, website: website,
+                   twitter: twitter, published: published, lat: lat, long: long)
+              .save(validate: false)
+end
+
+["PHP", "javaScript", "Ruby", "HTML", "Rails", "C#", "C++", "go", "Python",
+  "Css", "React.js", "Angular", "AJAX", "Node.js", "Express.js", "MySql",
+  "Docker", "Bootstrap", "CoffeeSript", "Pug", "Perl", "Postgres", "Less",
+  "Sass", "MangoDB", "Git", "Ember", "Django", "Swift", "Elixir"].each do |t|
+  Tag.create(name: t)
+end
+
+Organization.all.each do |org|
+  Tag.all.sample(3).each do |tag|
+    Tagging.create(tag: tag, organization: org)
+  end
+end -->
