@@ -1,11 +1,12 @@
 <header>
 <!-- need to add a tag because sidebar disappears after smalls creen  -->
 
-  <nav style="background-image: url(assets/geo_final.jpg); background-size: 100%" class='top-nav'>
+  <nav style="background-image: url(/assets/geo_final.jpg); background-size: 100%" class='top-nav'>
 
     <a href="/" class="brand-logo">
-      <%= image_tag("logo.png", class: "top-brand-logo") %>
-    </a>
+     <%= image_tag("logo.png", class: "top-brand-logo") %>
+   </a>
+
 
     <div class="nav-wrapper"><% if user_signed_in? && current_user.admin? %>
       <ul class="right">
