@@ -5,12 +5,8 @@
     
 
 <!--  -->
-  <div class="row">
-    <div >
-      <%= will_paginate @organizations %> <br><br>
-    </div>
-
-      <% @organizations.each do |o| %>
+    <div class="row">
+      <% @organizations.first(20).each do |o| %>
 
       <div class="col s12 m6">
         <a href="/organizations/<%= o.id %>">
@@ -37,9 +33,7 @@
       <% end %>
     </div>
 
-    <div >
-      <%= will_paginate @organizations %> <br><br>
-    </div>
+
 
 <!--  -->
   </div>
