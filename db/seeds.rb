@@ -622,6 +622,19 @@ end
   Tag.create(name: t)
 end
 
+%w(techradar techcrunch the-next-web mashable).each do |news|
+  NewsSearchTerm.create(name: news)
+end
+
+%w(YVR-Startups PolyglotVancouver net2van Vancouver-Hack-Space).each do |meet|
+  EventsSearchTerm.create(name: meet)
+end
+
+
+# %w(YVR-Startups PolyglotVancouver net2van Vancouver-Hack-Space yvrTesting Vancouver-Tech-Co-Founders webdesign-395 Code-Coffee-Vancouver).each do |meet|
+#   EventsSearchTerm.create(name: meet)
+# end
+
 Organization.all.each do |org|
   Tag.all.sample(3).each do |tag|
     Tagging.create(tag: tag, organization: org)
