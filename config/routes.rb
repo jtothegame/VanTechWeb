@@ -8,8 +8,6 @@ Rails.application.routes.draw do
     resources :tags
     resources :taggings
     resources :photos
-    resources :headers
-    resources :icons
     resources :news_search_terms
     resources :events_search_terms
 
