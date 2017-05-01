@@ -18,8 +18,8 @@
 <div class="body-content">
   <div style="height: 100%;" class="parallax-container">
     <div style="position:relative;" class="parallax">
-      <h1 style="z-index:1; postion:absolute; color:white; margin-left: 20px;"><%= @organization.name %></h1>
-      <img style="z-index:-1;"src="/assets/header2.png">
+      <h1 style="z-index:1; color:white; margin-left: 20px;"><%= @organization.name %></h1>
+      <img style="z-index:-1;" src="/assets/header2.png">
     </div>
   </div>
 <div class="container">
@@ -105,11 +105,6 @@
           {
               "lat": <%= @organization.lat %>,
               "lng": <%= @organization.long %>,
-              "picture": {
-                  "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
-                  "width":  32,
-                  "height": 32
-              },
               "infowindow": "<%= "#{@organization.name}"%>"
           }
         ]);
