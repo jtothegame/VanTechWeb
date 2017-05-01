@@ -23,6 +23,11 @@ class OrganizationsController < ApplicationController
 
   def show
 
+    headers = %w(header2.png header3.png header4.png header5.png header6.png header7.png header8.png header9.png header10.png)
+
+    @header = headers.sample(1)[0]
+
+    @header
   end
 
   def edit
