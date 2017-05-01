@@ -14,5 +14,23 @@ max-width: 200px;
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  
+
+}
+
+
+
+.header-container{
+  position: relative;
+}
+
+.header-title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.ht{
+  color: white;
+  text-shadow: 2px 2px #000000;
+
 }

@@ -16,17 +16,16 @@
 }(document, "script", "twitter-wjs"));</script>
 
 <div class="body-content">
-  <div style="height: 100%;" class="parallax-container">
-    <div style="position:relative;" class="parallax">
-      <h1 style="z-index:1; color:white; margin-left: 20px;"><%= @organization.name %></h1>
-      <!--<img style="z-index:-1;" src="/assets/header2.png">-->
-      <%= image_tag (@organization.header) %>
+
+  <div class="header-container">
+    <%= image_tag (@organization.header) %>
+    <div class="header-title">
+      <h1 class='ht'><%= @organization.name %></h1>
     </div>
   </div>
-<div class="container">
 
-  <div class="">
 
+  <div class="container">
   <div class="row">
       <div class="col m4">
         <% if @organization.icon.present? %>
@@ -94,36 +93,34 @@
     <% end %>
   </div>
   <div class="row">
-    <div class="col m4">
 
-    </div>
-    <div class="col m8">
+    <div class="col offset-m4 m8">
       <div style='width: 800px;'>
         <div id="map" style='width: 80%; height: 400px;'></div>
       </div>
     </div>
-  </div>
-
-
-  <script src="//maps.google.com/maps/api/js?key=<%=ENV['GOOGLE_MAPS_API_KEY'] %>"></script>
-  <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
-  <script>
-    handler = Gmaps.build('Google');
-      handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-        var markers = handler.addMarkers([
-          {
-              "lat": <%= @organization.lat %>,
-              "lng": <%= @organization.long %>,
-              "infowindow": "<%= "#{@organization.name}"%>"
-          }
-        ]);
-        handler.bounds.extendWith(markers);
-      handler.fitMapToBounds();
-    });
-
-  </script>
 
   </div>
 
-</div>
+
+      <script src="//maps.google.com/maps/api/js?key=<%=ENV['GOOGLE_MAPS_API_KEY'] %>"></script>
+
+      <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
+
+      <script>
+        handler = Gmaps.build('Google');
+          handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+            var markers = handler.addMarkers([
+              {
+                  "lat": <%= @organization.lat %>,
+                  "lng": <%= @organization.long %>,
+                  "infowindow": "<%= "#{@organization.name}"%>"
+              }
+            ]);
+            handler.bounds.extendWith(markers);
+          handler.fitMapToBounds();
+        });
+      </script>
+
+  </div>
 </div>
