@@ -2,6 +2,10 @@
 <div class="container">
 
   <h1>News List</h1>
+
+  <div >
+    <%= will_paginate @articles %> <br><br>
+  </div><br><br>
   <ul id = "article-block">
   <% 5.times do %>
   <li>
