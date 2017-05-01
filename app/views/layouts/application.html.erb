@@ -8,24 +8,22 @@
     <%= javascript_include_tag 'application' %>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
   </head>
 
   <body>
     <%= render 'layouts/navbar' %>
 
-    <div class="center">
-      <% flash.each do |message_type, message| %>
-        <%= javascript_tag "Materialize.toast('#{message}', 4000)" %>
-      <% end %>
-    </div>
+  <div class="center">
+    <% flash.each do |message_type, message| %>
+      <%= javascript_tag "Materialize.toast('#{message}', 4000)" %>
+    <% end %>
+  </div>
 
-    <main>
-      <%= yield %>
-    </main>
+  <main>
+    <%= yield %>
+  </main>
 
-    <%= render 'layouts/footer' %>
+  <%= render 'layouts/footer' %>
 
   </body>
 </html>
