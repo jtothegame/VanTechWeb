@@ -55,7 +55,7 @@ gem 'dotenv-rails'
 
 gem "simple_calendar", "~> 2.0"
 
-gem "rails-erd"
+gem 'kaminari'
 
 
 # Use Capistrano for deployment

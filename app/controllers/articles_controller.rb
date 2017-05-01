@@ -20,6 +20,8 @@ class ArticlesController < ApplicationController
       end
     end
 
-    @articles = Article.all
+    @articles = Article.all.page params[:page]
+
+    puts @articles
   end
 end

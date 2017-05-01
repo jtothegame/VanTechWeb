@@ -90,7 +90,6 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
-    choice (0.2.0)
     chosen-rails (1.5.2)
       coffee-rails (>= 3.2)
       railties (>= 3.0)
@@ -187,11 +186,6 @@ GEM
     rails-dom-testing (2.0.2)
       activesupport (>= 4.2.0, < 6.0)
       nokogiri (~> 1.6)
-    rails-erd (1.5.0)
-      activerecord (>= 3.2)
-      activesupport (>= 3.2)
-      choice (~> 0.2.0)
-      ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
     railties (5.0.2)
@@ -207,7 +201,6 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
-    ruby-graphviz (1.2.3)
     sass (3.4.23)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -270,12 +263,12 @@ DEPENDENCIES
   interactive_editor
   jbuilder (~> 2.5)
   jquery-rails
+  kaminari
   listen (~> 3.0.5)
   materialize-sass
   pg (~> 0.18)
   puma (~> 3.0)
   rails (~> 5.0.2)
-  rails-erd
   ransack!
   sass-rails
   simple_calendar (~> 2.0)
