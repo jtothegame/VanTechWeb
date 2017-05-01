@@ -12,16 +12,12 @@ class ArticlesController < ApplicationController
       api = NewsApi.new
       articles = api.articles(term.name)
 
-      puts articles
-      puts articles['articles']
-
       articles['articles'].each do |article|
         article = Article.new article
-        puts 'woo' if article.save
+        puts 'woo' if article.save!
       end
     end
 
     @articles = Article.all.page params[:page]
-    
   end
 end
