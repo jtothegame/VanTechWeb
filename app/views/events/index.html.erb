@@ -1,10 +1,12 @@
 <div class="body-content">
 <div class="container">
 
+  <h1><%= "giving you #{@events.length} events" %></h1>
+
   <div class="card">
       <div class="card-content">
         <h3>EVENTS LIST</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>      </div>
+             </div>
       <div class="card-content">
         <%= month_calendar do |date| %>
           <%= date.strftime("%d") %>
@@ -13,6 +15,8 @@
           </div>
         <% end %>
       </div>
+
+
     </div>
 
 </div>

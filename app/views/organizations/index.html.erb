@@ -1,9 +1,10 @@
 <div class="body-content">
   <div class="container">
 
+    <%= link_to "Add a New Organization", (new_organization_path), class: 'btn right disabled' %>
     <h1>Organization directory</h1>
-    <p>Here you go buddyy</p>
 
+<<<<<<< HEAD
 <!--  -->
   <div class="row">
     <div >
@@ -11,6 +12,11 @@
     </div>
 
       <% @organizations.each do |o| %>
+=======
+
+    <div class="row">
+      <% @organizations.first(20).each do |o| %>
+>>>>>>> de00b5345cbfb81da5ccb03173cb6e11e1c2d97a
 
       <div class="col s12 m6">
         <a href="/organizations/<%= o.id %>">
